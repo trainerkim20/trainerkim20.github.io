@@ -24,7 +24,6 @@
         Persona
         <figure>
         <img src="images/cool-joe.jpg" alt="Cool Joe">
-        <figcaption>
             <ul>
                 <li><strong>Name</strong>: Joe Cool</li>
                 <li><strong>Occupation</strong>: student</li>
@@ -33,8 +32,18 @@
                 <li><strong>Motivation</strong>: Joe is not into planning.  His last minute scrambling, whether it is getting to class in the morning or heading out on his latest adventure, has left him unprepared for weather conditions many times (He is tired of sleeping in the rain and snow).  He would like to be more prepared...without having to put much effort into it...or planning.</li>
                 <li><strong>Environment</strong>:  Joe is comfortable using laptops and Mobile devices, he will most often be found on a smart phone however.  Many of the places he frequents do not have great signal…he is often dealing with 3G speeds</li>
             </ul>
-        </figcaption>
         </figure>
+        Content
+        All weather pages should include location name, current temperature, forecast high, forecast low, current weather descriptor, forecast percentage of precipitation, and current wind speed and direction on small devices and hourly temps should be added on larger screens. The pages of the Weather Site will be built in the following order:
+        Pages
+        <ol>
+        <li><strong>Franklin and Greenville</strong> weather for each specific location. The weather for these pages should be pulled from the weather.JSON file that will be provided.  
+        </li>
+        <li><strong>Current</strong>: weather for the current location. Current location should be determined by using the Geolocation API of the browser.  This information should be passed to the National Weather Service (NWS) API to retrieve the current conditions. 
+        </li>
+        <li><strong>Search</strong>: Begins with only a search box, characters entered will cause a list of suggested matches to appear.  Selected location will pull up the weather. 
+        </li>
+        </ol>
        </main>
        <footer>
         &copy;2018 Kimberlee Freeman
