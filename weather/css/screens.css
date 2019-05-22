@@ -26,3 +26,7 @@ header h1 {
 h1, h2 {
     font-family: 'Sansita', sans-serif;
 }
+
+#Location ul {
+    display: inline;
+}
