@@ -27,11 +27,11 @@ h1, h2 {
     font-family: 'Sansita', sans-serif;
 }
 
-#Location ul {
+#Location li {
     display: inline;
 }
 
-nav ul {
+nav li {
     background-color: #0e89d5;
     display: inline;
 }
