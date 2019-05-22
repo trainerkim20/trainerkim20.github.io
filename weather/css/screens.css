@@ -5,7 +5,8 @@
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
 *  1.2 Google fonts
-*
+*       @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+            font-family: 'Sansita', sans-serif;
 *  2.  General Styles (for all pages and devices)
 *
 *  3.  Mobile First (styles specific to small screens)
