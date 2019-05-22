@@ -30,3 +30,12 @@ h1, h2 {
 #Location ul {
     display: inline;
 }
+
+#bottom nav ul {
+    background-color: #0e89d5;
+    display: inline;
+}
+
+footer {
+    background-color: #0e89d5;
+}
