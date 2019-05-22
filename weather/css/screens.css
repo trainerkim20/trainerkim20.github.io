@@ -4,6 +4,7 @@
 *  
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
+        @import url('normalize.css'); 
 *  1.2 Google fonts
 *       @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
             font-family: 'Sansita', sans-serif;
