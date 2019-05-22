@@ -35,7 +35,10 @@ section {
     border-top-left-radius: 80px 50px;
     border-top-right-radius: 80px 50px;
 }
-
+#Location {
+    text-align: left;
+    border: none;
+}
 #Location li {
     display: inline;
 }
