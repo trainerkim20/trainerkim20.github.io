@@ -43,3 +43,7 @@ nav li {
 footer {
     background-color: #0e89d5;
 }
+
+#hours li{
+    display: inline;
+}
