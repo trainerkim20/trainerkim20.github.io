@@ -27,6 +27,14 @@ h1, h2 {
     font-family: 'Sansita', sans-serif;
 }
 
+section {
+    border: 2px solid black;
+    border-bottom-left-radius: 80px 50px;
+    border-bottom-right-radius: 80px 50px;
+    border-top-left-radius: 80px 50px;
+    border-top-right-radius: 80px 50px;
+}
+
 #Location li {
     display: inline;
 }
