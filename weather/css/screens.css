@@ -31,6 +31,10 @@ h1, h2 {
     display: inline;
 }
 
+nav ul {
+    text-align: center;
+}
+
 nav li {
     background-color: #0e89d5;
     display: inline;
