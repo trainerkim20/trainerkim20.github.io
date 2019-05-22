@@ -30,7 +30,7 @@ h1, h2 {
 section {
     text-align: center;
     border: 1px solid black;
-    border-bottom-left-radius: 80px 50px;
+    border-bottom-left-radius: 30px 50px;
     border-bottom-right-radius: 80px 50px;
     border-top-left-radius: 80px 50px;
     border-top-right-radius: 80px 50px;
