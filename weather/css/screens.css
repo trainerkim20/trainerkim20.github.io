@@ -15,3 +15,7 @@
 *  4.  Large Screen Styles (Media Queries begin here)
 *
 * ****************************** */
+
+h1 {
+    color: red;
+}
