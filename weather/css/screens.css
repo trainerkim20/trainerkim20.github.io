@@ -18,6 +18,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
+@import url('normalize.css');
+
 header h1 {
     background-color:#0e89d5;
     font-family: 'Helvetica', sans-serif;
