@@ -60,12 +60,16 @@ footer {
     background-color: #0e89d5;
 }
 
+#hours {
+    background-color: grey;
+}
+
 #hours li{
     display: inline;
-    background-color: azure;
+    
 }
 
 #forecast, #wind, #Temperature {
-    background-color: azure;
+    background-color: grey;
     background-image: url("images/clear.jpg");
 }
