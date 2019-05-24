@@ -66,6 +66,7 @@ footer {
 
 #hours {
     background-color: grey;
+    overflow: scroll;
 }
 
 #hours li{
