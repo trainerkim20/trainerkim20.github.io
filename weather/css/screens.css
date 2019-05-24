@@ -49,10 +49,12 @@ section {
 nav ul {
     text-align: center;
     background-color: #0e89d5;
+    padding: 30px;
 }
 
 nav li {
     background-color: #0e89d5;
+    text-decoration-color: white;
     display: inline;
 }
 
