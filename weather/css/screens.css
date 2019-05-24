@@ -66,5 +66,6 @@ footer {
 }
 
 #forecast, #wind, #Temperature {
-    background-image: src="images/clear.jpg" alt="Clear Skys";
+    background-color: azure;
+    background-image: url("images/clear.jpg");
 }
