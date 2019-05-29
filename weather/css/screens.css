@@ -36,12 +36,6 @@ h1, h2 {
     font-family: 'Sansita', sans-serif;
 }
 
-section {
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    
-}
 #Location {
     text-align: left;
     border: none;
@@ -51,10 +45,30 @@ section {
     
 }
 
-#tem1, #temp2 {
-    display: inline;
-    list-style-type: none;
+#Location ul {
+    margin-left: 0;
+    padding-left: 0;
 }
+
+section {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+
+
+#tem1 {
+    display: inline;
+    color: red;
+}
+
+#temp2 {
+    display: inline; 
+    color: blue;
+    
+}
+
 
 nav ul {
     text-align: center;
