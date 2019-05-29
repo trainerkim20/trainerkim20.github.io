@@ -112,3 +112,8 @@ footer {
 .times {
     display: inline;
 }
+
+#Raindrops {
+    height: 50%;
+    width: 50%;
+}
