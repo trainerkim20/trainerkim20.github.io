@@ -76,7 +76,7 @@ footer {
 
 #forecast, #wind, #Temperature {
     background-color: grey;
-    background-image: url(images/clear.jpg);
+    background-image: url("../images/rain.jpg");
 }
 
 .bigF {
