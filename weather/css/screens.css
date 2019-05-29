@@ -48,6 +48,12 @@ section {
 }
 #Location li {
     display: inline;
+    
+}
+
+#tem1, #temp2 {
+    display: inline;
+    list-style-type: none;
 }
 
 nav ul {
@@ -107,6 +113,10 @@ footer {
     width: 100%;
     text-align: center;
 
+}
+
+#wind li {
+    list-style-type: none;
 }
 
 .times {
