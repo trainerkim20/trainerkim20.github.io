@@ -173,10 +173,12 @@ footer {
 
     #rectangles {
         display: flex;
-        flex-flow: row;   
+        flex-flow: row;  
+        justify-content: center; 
     }
 
     .squares {
         width: 431.7px;
+        margin: 7px;
     }
 }
