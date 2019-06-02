@@ -165,7 +165,8 @@ footer {
     #smallnav {
         display: none;
     }
-    #forecast, #wind, #Temperature {
+    .square {
         align-content: center;
+        justify-content: center;
     }
 }
