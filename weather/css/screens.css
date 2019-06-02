@@ -1,6 +1,6 @@
 /* ******************************
 *  Stylesheet for Screened Devices
-*  Created by: Put your name here
+*  Created by: Kimberlee Freeman
 *  
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
@@ -16,9 +16,14 @@
 *
 * ****************************** */
 
+/*  1.2 Google fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
 @import url('normalize.css');
+
+
+/*  3.  Mobile First (styles specific to small screens)*/
 
 header h1 {
     background-color:#0e89d5;
@@ -76,6 +81,14 @@ nav ul {
     background-color: #0e89d5;
     padding: 50px;
     margin-top: 10px;
+}
+
+#bignav {
+    display: none;
+}
+
+#smallnav {
+    display: inline;
 }
 
 nav li {
@@ -140,4 +153,19 @@ footer {
 #Raindrops {
     height: 50%;
     width: 50%;
+}
+
+/*4.  Large Screen Styles (Media Queries begin here)*/
+
+@media only screen and (max-width: 600px) {
+    #bignav {
+        display: inline;
+    }
+
+    #smallnav {
+        display: none;
+    }
+    #forecast, #wind, #Temperature {
+        align-content: center;
+    }
 }
