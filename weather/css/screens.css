@@ -173,9 +173,9 @@ footer {
 
     #forecast, #wind, #Temperature {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         align-content: center;
-        flex-wrap: wrap;
+        
         
         
     }
