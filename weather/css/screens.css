@@ -157,7 +157,7 @@ footer {
 
 /*4.  Large Screen Styles (Media Queries begin here)*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     #bignav {
         display: inline;
     }
@@ -165,8 +165,18 @@ footer {
     #smallnav {
         display: none;
     }
-    .square {
+
+    #hours h2 {
+        text-align: left;
+        
+    }
+
+    #forecast, #wind, #Temperature {
+        display: flex;
+        flex-direction: row;
         align-content: center;
-        justify-content: center;
+        flex-wrap: wrap;
+        
+        
     }
 }
