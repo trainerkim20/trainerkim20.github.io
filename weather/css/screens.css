@@ -171,12 +171,12 @@ footer {
         
     }
 
-    #forecast, #wind, #Temperature {
+    #rectangles {
         display: flex;
-        flex-flow: row wrap;
-        align-content: center;
-        
-        
-        
+        flex-flow: row;   
+    }
+
+    .squares {
+        width: 431.7px;
     }
 }
