@@ -1,0 +1,19 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Kimberlee Freeman
+*  
+*  1.  Includes (fonts and supplementary stylesheets)
+*  1.1 Normalize
+        @import url('normalize.css'); 
+*  1.2 Google fonts
+*       @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+            font-family: 'Sansita', sans-serif;
+*  2.  General Styles (for all pages and devices)
+*
+*  3.  Mobile First (styles specific to small screens)
+*
+*  4.  Large Screen Styles (Media Queries begin here)
+*
+* ****************************** */
+
+/*  1.2 Google fonts*/
