@@ -19,7 +19,7 @@
 
 
 
-
+/*  4.  Large Screen Styles (Media Queries begin here)*/
 
 
 /*  3.  Mobile First (styles specific to small screens)*/
@@ -27,6 +27,7 @@
     .big {
         display: flex;
         flex-direction: column;  
+        width: 500px;
     }
 
     .small {
