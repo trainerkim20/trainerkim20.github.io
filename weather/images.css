@@ -32,7 +32,6 @@
     }
 
 /*  3.  Mobile First (styles specific to small screens)*/
-
     .big {
         display: none;
     }
@@ -40,7 +39,7 @@
     .small {
         display: flex;
         flex-direction: column;  
-        width: 500px;
+        width: 400px;
         
     }
 }
