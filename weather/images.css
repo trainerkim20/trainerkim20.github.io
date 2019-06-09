@@ -32,7 +32,7 @@
     }
 
 /*  3.  Mobile First (styles specific to small screens)*/
-@media only screen and (min-width: 300px) {
+
     .big {
         display: none;
     }
