@@ -20,9 +20,6 @@
 
 
 /*  4.  Large Screen Styles (Media Queries begin here)*/
-
-
-/*  3.  Mobile First (styles specific to small screens)*/
 @media only screen and (min-width: 600px) {
     .big {
         display: flex;
@@ -33,6 +30,20 @@
     .small {
         display: none;
     }
+
+/*  3.  Mobile First (styles specific to small screens)*/
+@media only screen and (max-width: 600px) {
+    .big {
+        display: none;
+    }
+
+    .small {
+        display: flex;
+        flex-direction: column;  
+        width: 500px;
+        
+    }
+}
 
 
 
