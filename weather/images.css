@@ -24,11 +24,12 @@
 
 /*  3.  Mobile First (styles specific to small screens)*/
 @media only screen and (min-width: 600px) {
-    .small {
+    .big {
         display: flex;
+        flex-direction: column;  
     }
 
-    .big {
+    .small {
         display: none;
     }
 
