@@ -17,16 +17,6 @@
 
 /*  1.2 Google fonts*/
 
-.big {
-    display: none;
-}
-
-.small {
-    display: flex;
-    flex-direction: column;  
-    width: 400px;
-    
-}
 
 /*  4.  Large Screen Styles (Media Queries begin here)*/
 @media only screen and (min-width: 600px) {
@@ -41,7 +31,17 @@
     }
 
 /*  3.  Mobile First (styles specific to small screens)*/
-  
+@media only screen and (min-width: 300px) {
+    .big {
+        display: none;
+    }
+    
+    .small {
+        display: flex;
+        flex-direction: column;  
+        width: 400px;   
+    }
+    }
 
 
 
