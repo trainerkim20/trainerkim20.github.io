@@ -23,7 +23,14 @@
 
 
 /*  3.  Mobile First (styles specific to small screens)*/
+@media only screen and (min-width: 600px) {
+    .small {
+        display: flex;
+    }
 
+    #.big {
+        display: none;
+    }
 
 
 
