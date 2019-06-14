@@ -8,7 +8,7 @@ const feelTemp = document.getElementById('feelTemp');
 /*Variables for Function Use*/
 const temp = 31;
 const speed = 5;
-
+buildWC(speed, temp);
 /* Calculate the Windchill*/
 function buildWC(speed, temp) {
 
