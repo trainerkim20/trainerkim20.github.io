@@ -9,6 +9,8 @@
 *       @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
             font-family: 'Sansita', sans-serif;
 *  2.  General Styles (for all pages and devices)
+* North=0, South=180, North/South=90, North/West=270
+*
 *
 *  3.  Mobile First (styles specific to small screens)
 *
@@ -139,6 +141,7 @@ footer {
     background: no-repeat center/85% url('/weather/images/wind-pointer.png');
     z-index: 100;
     margin: -.6em auto 0;
+    transform: rotate(180deg);
    }
 
 #poiterspeed {
