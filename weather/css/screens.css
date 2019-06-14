@@ -9,7 +9,7 @@
 *       @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
             font-family: 'Sansita', sans-serif;
 *  2.  General Styles (for all pages and devices)
-* North=0, South=180, North/South=90, North/West=270
+/* North=0, North/east=45, South=180, South/East=135, South/West=225, East=90, West=270, North/West=315,*/ 
 *
 *
 *  3.  Mobile First (styles specific to small screens)
@@ -135,13 +135,40 @@ footer {
     position: relative;
 }
 
+/* North=0, North/east=45, South=180, South/East=135, South/West=225, East=90, West=270, North/West=315,*/
 .n {
-
+    transform: rotate(0deg);
 }
 
  .s {
     transform: rotate(180deg);
  }
+
+ .e {
+    transform: rotate(90deg);
+}
+
+.w {
+    transform: rotate(270deg);
+}
+
+.ne {
+    transform: rotate(45deg);
+}
+
+.se {
+    transform: rotate(135deg);
+}
+
+.sw {
+    transform: rotate(225deg);
+}
+
+.nw {
+    transform: rotate(315deg);
+}
+    
+}
 
 #dial {
     height: 150px;
@@ -176,6 +203,11 @@ footer {
 
 .squares {
     background-size: cover;
+   }
+
+   /* Background pictures for summary */
+.clear {
+    background-image: url("/weather/images/clear400.jpg");
    }
 
 /*4.  Large Screen Styles (Media Queries begin here)*/
