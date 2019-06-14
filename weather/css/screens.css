@@ -135,13 +135,21 @@ footer {
     position: relative;
 }
 
+.n {
+
+}
+
+ .s {
+    transform: rotate(180deg);
+ }
+
 #dial {
     height: 150px;
     width: 150px;
     background: no-repeat center/85% url('/weather/images/wind-pointer.png');
     z-index: 100;
     margin: -.6em auto 0;
-    transform: rotate(180deg);
+    
    }
 
 #poiterspeed {
@@ -165,6 +173,10 @@ footer {
     height: 50%;
     width: 50%;
 }
+
+.squares {
+    background-size: cover;
+   }
 
 /*4.  Large Screen Styles (Media Queries begin here)*/
 
