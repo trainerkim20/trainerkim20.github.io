@@ -10,8 +10,7 @@ const temp = 31;
 const speed = 5;
 buildWC(speed, temp);
 
-const direction = "N"; /*Set your own value*/
-windDial(direction);
+
 
 /* Calculate the Windchill*/
 function buildWC(speed, temp) {
@@ -35,7 +34,8 @@ function buildWC(speed, temp) {
       feelTemp.innerHTML = wc;
 }
 
-
+const direction = "S"; /*Set your own value*/
+windDial(direction);
 
 /*Wind Dial Function*/
 function windDial(direction){
