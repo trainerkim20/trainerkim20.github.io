@@ -179,13 +179,8 @@ function convertMeters(meters){
   feet=Math.floor(feet);
   console.log(feet);
 
-  return feet; 
+  elevation.innerHTML= feet;
 
 }
-
-
-
-
-
 
 console.log('My javascript is being read.');
