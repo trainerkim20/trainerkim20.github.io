@@ -167,6 +167,8 @@ footer {
 .nw {
     transform: rotate(315deg);
 }
+
+
     
 
 
@@ -209,6 +211,22 @@ footer {
 .clear {
     background-image: url("/weather/images/clear400.jpg");
    }
+
+.cloud {
+    background-image: url("/weather/images/clouds400.jpg")
+}
+
+.fog {
+    background-image: url("/weather/images/fog400.jpg")
+}
+
+.rain {
+    background-image: url("/weather/images/rain400.jpg")
+}
+
+.snow {
+    background-image: url("/weather/images/snow400.jpg")
+}
 
 /*4.  Large Screen Styles (Media Queries begin here)*/
 

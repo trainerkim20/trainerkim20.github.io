@@ -84,6 +84,53 @@ const dial = document.getElementById("dial");
    }
 }
 
+/*const cr = 'Sunny';
+const cd = 'Partly Cloudy';
+const fg = 'Foggy';
+const rn = 'Wet';
+const sow = 'Snowy';
+getCondition(cr, cd, fg, rn, sow);*/ 
+
+function getCondition(condition){
+  const summary = document.getElementById("summary");
+switch (condition){
+  case "sunny":
+    return "Clear";
+        case "Partly cloudy":
+       return "Cloudy";
+           case "wet":
+      return "Rain";
+       case "snowy":
+      return "Snow";
+}
+}
+
+function changeSummaryImage(image){
+
+  const forecast = document.getElementById("forecast");
+
+  switch (image){
+    case "sunny":
+   squares.setAttribute("class", "clear");
+   break;
+   case "cloudy":
+  squares.setAttribute("class", "cloud");
+  break;
+  case "cloudy":
+      squares.setAttribute("class", "fog");
+      break;
+      case "wet":
+  squares.setAttribute("class", "rain");
+  break;
+  case "snowy":
+  squares.setAttribute("class", "snow");
+  break;
+  }
+  
+
+
+}
+
 
 
 
