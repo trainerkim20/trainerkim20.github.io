@@ -10,13 +10,11 @@
             font-family: 'Sansita', sans-serif;
 *  2.  General Styles (for all pages and devices)
 /* North=0, North/east=45, South=180, South/East=135, South/West=225, East=90, West=270, North/West=315,*/ 
-*
-*
-*  /*3.  Mobile First (styles specific to small screens)*/
-*
-*  /*4.  Large Screen Styles (Media Queries begin here)
-*
-* ****************************** */
+
+/*3.  Mobile First (styles specific to small screens)*/
+
+/*4.  Large Screen Styles (Media Queries begin here)
+
 
 /*  1.2 Google fonts*/
 
@@ -27,6 +25,10 @@
 
 
 /*  3.  Mobile First (styles specific to small screens)*/
+
+#title {
+    background-color:#0e89d5;
+}
 
 header h1 {
     background-color:#0e89d5;
@@ -125,7 +127,8 @@ footer {
 
 #rectangles {
     background-color: grey;
-    background-image: url("../images/rain.jpg");
+    background-size: cover;
+    /*background-image: url("../images/rain.jpg");*/
 }
 
 .bigF {
@@ -200,9 +203,12 @@ footer {
     width: 50%;
 }
 
-.squares {
-    background-size: cover;
-   }
+#imagesummary {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 361px;
+}
 
    /* Background pictures for summary */
 .clear {
@@ -252,7 +258,7 @@ footer {
         margin: 7px;
     }
 
-    .clear {
+    /*.clear {
         background-image: url("/weather/images/clear500.jpg");
        }
     
@@ -270,7 +276,7 @@ footer {
     
     .snow {
         background-image: url("/weather/images/snow500.jpg")
-    }
+    }*/
 
     #poiterspeed {
         position: absolute;
@@ -280,4 +286,12 @@ footer {
         text-align: center;
     
     }
+
+    /*#imagesummary {
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        height: 451px;
+    }*/
+
 }

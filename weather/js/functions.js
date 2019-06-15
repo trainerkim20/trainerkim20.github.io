@@ -9,15 +9,24 @@
 const temp = 31;
 const speed = 5;
 buildWC(speed, temp);
+console.log(speed,temp);
 
 const direction = "N"; /*Set your own value*/
 windDial(direction);
+console.log(direction);
 
-const condition = "sunny"; 
+let head = document.getElementById("summary").innerHTML;
+let condition = head.toLowerCase();
 getCondition(condition);
+console.log(condition);
 
-const image = "sunny"
+let image= getCondition(condition);
 changeSummaryImage(image);
+console.log(image);
+
+
+
+
 
 const meters=1514.246;
 convertMeters(meters);
@@ -110,8 +119,6 @@ const fg = 'Foggy';
 const rn = 'Wet';
 const sow = 'Snowy';*/
 
-let head = document.getElementById("summary").innerHTML;
-let condition = head.toLowerCase();
 
 function getCondition(condition){
   
@@ -134,9 +141,7 @@ if (condition.includes('snowstorm') || condition.includes('snow') || condition.i
 }
 }
 
-let image= getCondition(condition);
 
-changeSummaryImage(image);
 
 function changeSummaryImage(image) {
 
