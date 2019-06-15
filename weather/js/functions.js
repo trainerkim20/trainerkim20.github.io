@@ -28,7 +28,7 @@ console.log(image);
 
 
 
-const meters=1514.246;
+let meters= document.getElementById("elevation").innerHTML;
 convertMeters(meters);
 
 
@@ -179,7 +179,7 @@ function convertMeters(meters){
   feet=Math.floor(feet);
   console.log(feet);
 
-  elevation.innerHTML= feet; 
+  return feet; 
 
 }
 
