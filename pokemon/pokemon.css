@@ -1,0 +1,43 @@
+header {
+    /*text-transform: uppercase;*/
+    border: 1px solid #000000; 
+    height: 192px;
+    width: 100%;
+    background-color: #000000; 
+}
+
+#Title {
+
+    margin: 0 auto;
+    padding: 50px;
+    color: #FFFFFF;
+    font-size: 65pt;
+    width: 100%;
+}
+
+#instructions {
+
+    font-family: "Arial Black";
+
+}
+
+main {
+    text-align: center;
+}
+
+main section {
+    text-align: left;
+}
+
+button { 
+    font-size: 40px;
+    height: 40px: 
+
+} 
+
+.buttonborder {
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    height: 70px;
+    width: 100%;
+}
