@@ -82,3 +82,20 @@ function showData1(grass){
       }
       
     }
+
+    let dragon = document.getElementById("dragondata");
+  showData(dragon);
+
+  function showData6(dragon){
+   
+    const flip = document.getElementById("flip6");
+      var x = document.getElementById("dragondata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }

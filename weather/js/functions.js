@@ -15,7 +15,7 @@ const direction = "N"; /*Set your own value*/
 windDial(direction);
 console.log(direction);
 
-/*let head = document.getElementById("summary").innerHTML;*/
+const summary = document.getElementById("summary");
 const condition = "snow";
 getCondition(condition);
 console.log(condition);
@@ -141,13 +141,15 @@ if (condition.includes('snowstorm') || condition.includes('snow') || condition.i
 }
 }
 
+ 
 
 
 function changeSummaryImage(image) {
 
   const rectangles = document.getElementById("rectangles");
   const imagesummary = document.getElementById("imagesummary");
-
+  const summary = document.getElementById("summary").innerHTML;
+  
   if (image == 'clear'){
         rectangles.setAttribute("class", "clear");
         imagesummary.setAttribute("class", "clear");
