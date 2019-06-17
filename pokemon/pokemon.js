@@ -166,3 +166,21 @@ function showData1(){
       }
       
     }
+
+    let ghost = document.getElementById("ghostdata");
+  showData(ghost);
+
+  function showData11(){
+   
+    const flip = document.getElementById("flip11");
+      var x = document.getElementById("ghostdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
