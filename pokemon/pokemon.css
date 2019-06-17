@@ -101,6 +101,10 @@ section h1 {
     display: none;
 }
 
+#normaldata {
+    display: none;
+}
+
 .normal {
     transform: rotate(0deg);
 }
@@ -206,6 +210,14 @@ section h1 {
 }
 
 #flip13{ 
+    position: absolute;
+    left: 5px;
+    height: 55px;
+    width: 36px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip14{ 
     position: absolute;
     left: 5px;
     height: 55px;

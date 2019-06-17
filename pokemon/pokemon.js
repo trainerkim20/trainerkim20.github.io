@@ -218,3 +218,20 @@ function showData1(){
       
     }
 
+    let normal = document.getElementById("normaldata");
+  showData(normal);
+
+  function showData14(){
+   
+    const flip = document.getElementById("flip14");
+      var x = document.getElementById("normaldata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
