@@ -73,6 +73,10 @@ section h1 {
     display: none;
 }
 
+#electricdata {
+    display: none;
+}
+
 .normal {
     transform: rotate(0deg);
 }
@@ -122,6 +126,14 @@ section h1 {
 }
 
 #flip6{ 
+    position: absolute;
+    left: 5px;
+    height: 36px;
+    width: 55px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip7{ 
     position: absolute;
     left: 5px;
     height: 36px;
