@@ -15,8 +15,8 @@ const direction = "N"; /*Set your own value*/
 windDial(direction);
 console.log(direction);
 
-let head = document.getElementById("summary").innerHTML;
-let condition = head.toLowerCase();
+/*let head = document.getElementById("summary").innerHTML;*/
+const condition = "snow";
 getCondition(condition);
 console.log(condition);
 
