@@ -116,3 +116,20 @@ function showData1(grass){
       }
       
     }
+
+    let fairy = document.getElementById("fairydata");
+  showData(fairy);
+
+  function showData8(fairy){
+   
+    const flip = document.getElementById("flip8");
+      var x = document.getElementById("fairydata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
