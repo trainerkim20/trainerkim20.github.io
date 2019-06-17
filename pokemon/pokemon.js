@@ -235,3 +235,20 @@ function showData1(){
       
     }
 
+    let poison = document.getElementById("poisondata");
+  showData(poison);
+
+  function showData15(){
+   
+    const flip = document.getElementById("flip15");
+      var x = document.getElementById("poisondata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
