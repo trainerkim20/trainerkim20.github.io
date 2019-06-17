@@ -269,3 +269,20 @@ function showData1(){
       
     }
 
+    let rock = document.getElementById("rockdata");
+  showData(rock);
+
+  function showData17(){
+   
+    const flip = document.getElementById("flip17");
+      var x = document.getElementById("rockdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
