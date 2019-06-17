@@ -65,3 +65,20 @@ function showData1(grass){
       }
       
     }
+
+    let dark = document.getElementById("darkdata");
+  showData(dark);
+
+  function showData5(dark){
+   
+    const flip = document.getElementById("flip5");
+      var x = document.getElementById("darkdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
