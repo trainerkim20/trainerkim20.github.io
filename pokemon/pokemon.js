@@ -184,3 +184,20 @@ function showData1(){
       
     }
 
+    let ground = document.getElementById("grounddata");
+  showData(ground);
+
+  function showData12(){
+   
+    const flip = document.getElementById("flip12");
+      var x = document.getElementById("grounddata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
