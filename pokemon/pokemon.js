@@ -252,3 +252,20 @@ function showData1(){
       
     }
 
+    let psychic = document.getElementById("psychicdata");
+  showData(psychic);
+
+  function showData16(){
+   
+    const flip = document.getElementById("flip16");
+      var x = document.getElementById("psychicdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
