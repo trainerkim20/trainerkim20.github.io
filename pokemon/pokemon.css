@@ -56,6 +56,14 @@ section h1 {
     display: none;
 }
 
+#waterdata {
+    display: none;
+}
+
+#bugdata {
+    display: none;
+}
+
 .normal {
     transform: rotate(0deg);
 }
@@ -81,6 +89,14 @@ section h1 {
 }
 
 #flip3{ 
+    position: absolute;
+    left: 5px;
+    height: 36px;
+    width: 55px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip4{ 
     position: absolute;
     left: 5px;
     height: 36px;

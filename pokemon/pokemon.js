@@ -38,7 +38,7 @@ function showData1(grass){
   function showData3(water){
    
     const flip = document.getElementById("flip3");
-      var x = document.getElementById("firedata");
+      var x = document.getElementById("waterdata");
       if (x.style.display === "none") {
         x.style.display = "block";
         flip.setAttribute("class", "open");
@@ -49,3 +49,19 @@ function showData1(grass){
       
     }
 
+    let bug = document.getElementById("bugdata");
+  showData(bug);
+
+  function showData4(bug){
+   
+    const flip = document.getElementById("flip4");
+      var x = document.getElementById("waterdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
