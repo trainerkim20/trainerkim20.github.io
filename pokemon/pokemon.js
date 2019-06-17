@@ -55,7 +55,7 @@ function showData1(grass){
   function showData4(bug){
    
     const flip = document.getElementById("flip4");
-      var x = document.getElementById("waterdata");
+      var x = document.getElementById("bugdata");
       if (x.style.display === "none") {
         x.style.display = "block";
         flip.setAttribute("class", "open");
