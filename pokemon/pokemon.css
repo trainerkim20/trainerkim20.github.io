@@ -117,6 +117,10 @@ section h1 {
     display: none;
 }
 
+#steeldata {
+    display: none;
+}
+
 .normal {
     transform: rotate(0deg);
 }
@@ -254,6 +258,14 @@ section h1 {
 }
 
 #flip17{ 
+    position: absolute;
+    left: 5px;
+    height: 55px;
+    width: 36px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip18{ 
     position: absolute;
     left: 5px;
     height: 55px;

@@ -286,3 +286,21 @@ function showData1(){
       
     }
 
+    let steel = document.getElementById("steeldata");
+  showData(steel);
+
+  function showData18(){
+   
+    const flip = document.getElementById("flip18");
+      var x = document.getElementById("steeldata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
+
