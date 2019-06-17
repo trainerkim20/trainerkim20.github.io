@@ -72,7 +72,15 @@ section h1 {
     background: no-repeat url("images/triangle.png");
 }
 
-#flip1 { 
+#flip2{ 
+    position: absolute;
+    left: 5px;
+    height: 36px;
+    width: 55px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip3{ 
     position: absolute;
     left: 5px;
     height: 36px;
