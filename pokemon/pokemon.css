@@ -29,19 +29,23 @@ main section {
     text-align: left;
 }
 
-button { 
+section h1 { 
     font-size: 40px;
-    height: 40px: 
-
-} 
-
-.buttonborder {
+    height: 40px;
     border: 2px solid #000000;
     background-color: #FFFFFF;
     height: 70px;
     width: 100%;
-}
+} 
 
 #grassdata {
     display: none;
+}
+
+.normal {
+    transform: rotate(0deg);
+}
+
+.open {
+    transform: rotate(180deg);
 }
