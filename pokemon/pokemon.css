@@ -85,6 +85,10 @@ section h1 {
     display: none;
 }
 
+#flyingdata {
+    display: none;
+}
+
 .normal {
     transform: rotate(0deg);
 }
@@ -158,6 +162,14 @@ section h1 {
 }
 
 #flip9{ 
+    position: absolute;
+    left: 5px;
+    height: 36px;
+    width: 55px;
+    background: no-repeat url("images/triangle.png");
+}
+
+#flip10{ 
     position: absolute;
     left: 5px;
     height: 36px;

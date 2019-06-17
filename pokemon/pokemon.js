@@ -2,9 +2,8 @@ let grass = document.getElementById("grassdata");
 showData(grass);
 
 
-function showData1(grass){
+function showData1(){
  
-  const flip = document.getElementById("flip1");
     var x = document.getElementById("grassdata");
     if (x.style.display === "none") {
       x.style.display = "block";
@@ -18,7 +17,7 @@ function showData1(grass){
  let fire = document.getElementById("firedata");
   showData(fire);
 
-  function showData2(fire){
+  function showData2(){
    
     const flip = document.getElementById("flip2");
       var x = document.getElementById("firedata");
@@ -35,7 +34,7 @@ function showData1(grass){
     let water = document.getElementById("waterdata");
   showData(water);
 
-  function showData3(water){
+  function showData3(){
    
     const flip = document.getElementById("flip3");
       var x = document.getElementById("waterdata");
@@ -52,7 +51,7 @@ function showData1(grass){
     let bug = document.getElementById("bugdata");
   showData(bug);
 
-  function showData4(bug){
+  function showData4(){
    
     const flip = document.getElementById("flip4");
       var x = document.getElementById("bugdata");
@@ -69,7 +68,7 @@ function showData1(grass){
     let dark = document.getElementById("darkdata");
   showData(dark);
 
-  function showData5(dark){
+  function showData5(){
    
     const flip = document.getElementById("flip5");
       var x = document.getElementById("darkdata");
@@ -86,7 +85,7 @@ function showData1(grass){
     let dragon = document.getElementById("dragondata");
   showData(dragon);
 
-  function showData6(dragon){
+  function showData6(){
    
     const flip = document.getElementById("flip6");
       var x = document.getElementById("dragondata");
@@ -103,7 +102,7 @@ function showData1(grass){
     let electric = document.getElementById("electricdata");
   showData(electric);
 
-  function showData7(electric){
+  function showData7(){
    
     const flip = document.getElementById("flip7");
       var x = document.getElementById("electricdata");
@@ -120,7 +119,7 @@ function showData1(grass){
     let fairy = document.getElementById("fairydata");
   showData(fairy);
 
-  function showData8(fairy){
+  function showData8(){
    
     const flip = document.getElementById("flip8");
       var x = document.getElementById("fairydata");
@@ -137,10 +136,27 @@ function showData1(grass){
     let fighting = document.getElementById("fightingdata");
   showData(fighting);
 
-  function showData9(fighting){
+  function showData9(){
    
     const flip = document.getElementById("flip9");
       var x = document.getElementById("fightingdata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
+    let flying = document.getElementById("flyingdata");
+  showData(flying);
+
+  function showData10(){
+   
+    const flip = document.getElementById("flip10");
+      var x = document.getElementById("flyingdata");
       if (x.style.display === "none") {
         x.style.display = "block";
         flip.setAttribute("class", "open");
