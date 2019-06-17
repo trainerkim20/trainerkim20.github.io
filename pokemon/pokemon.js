@@ -201,3 +201,20 @@ function showData1(){
       
     }
 
+    let ice = document.getElementById("icedata");
+  showData(ice);
+
+  function showData13(){
+   
+    const flip = document.getElementById("flip13");
+      var x = document.getElementById("icedata");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        flip.setAttribute("class", "open");
+      } else {
+        x.style.display = "none";
+        flip.setAttribute("class", "normal");
+      }
+      
+    }
+
