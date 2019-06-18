@@ -21,8 +21,18 @@ header {
 
 }
 
+nav {
+  
+}
+
+nav img {
+    width: 150px;
+    margin: 10px;
+}
+
 main {
     text-align: center;
+    align-content: center;
 }
 
 main section {
