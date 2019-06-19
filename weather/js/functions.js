@@ -15,8 +15,8 @@ const direction = "N"; /*Set your own value*/
 windDial(direction);
 console.log(direction);
 
-const summary = document.getElementById("summary");
-const condition = "snow";
+/*const summary = document.getElementById("summary");*/
+let condition = "wet";
 getCondition(condition);
 console.log(condition);
 
@@ -121,22 +121,31 @@ const sow = 'Snowy';*/
 
 
 function getCondition(condition){
+
+  const summary = document.getElementById('summary');
   
 if (condition.includes('sunny') || condition.includes('clear') || condition.includes('warm')) {
-  return "clear"; 
+    
+  
+      summary.innerHTML = "Clear";
+      return "clear";
 }
 if (condition.includes('partly cloudy') || condition.includes('shady') || condition.includes('cloud')) {
+  summary.innerHTML = "Cloud";
   return "cloud";
 }
 
 if (condition.includes('wet') || condition.includes('rain') || condition.includes('Rainstorm')) {
+  summary.innerHTML = "Rain";
   return "rain";
 }
 
 if (condition.includes('fog') || condition.includes('misty') || condition.includes('hazzy')) {
+  summary.innerHTML = "Fog";
   return "fog";
 }
 if (condition.includes('snowstorm') || condition.includes('snow') || condition.includes('freezing')) {
+  summary.innerHTML = "Snow";
   return "snow";
 }
 }
