@@ -6,16 +6,16 @@
 
 
 /*Variables for Function Use*/
-const temp = 31;
-const speed = 5;
+let temp = 31;
+let speed = 5;
 buildWC(speed, temp);
 console.log(speed,temp);
 
-const direction = "N"; /*Set your own value*/
+let direction = "N"; /*Set your own value*/
 windDial(direction);
 console.log(direction);
 
-/*const summary = document.getElementById("summary");*/
+/*let summary = document.getElementById("summary");*/
 let condition = "wet";
 getCondition(condition);
 console.log(condition);
@@ -36,7 +36,7 @@ convertMeters(meters);
 /* Calculate the Windchill*/
 function buildWC(speed, temp) {
 
-    const feelTemp = document.getElementById('feelTemp');
+    let feelTemp = document.getElementById('feelTemp');
 
     /*Compute the windchill*/
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
@@ -61,7 +61,7 @@ function buildWC(speed, temp) {
 function windDial(direction){
 
 // Get the wind dial container
-const dial = document.getElementById("dial");
+let dial = document.getElementById("dial");
 
     /*Determine the dial class*/
     switch (direction){
@@ -113,16 +113,16 @@ const dial = document.getElementById("dial");
    }
 }
 
-/*const cr = 'Sunny';
-const cd = 'Partly Cloudy';
-const fg = 'Foggy';
-const rn = 'Wet';
-const sow = 'Snowy';*/
+/*let cr = 'Sunny';
+let cd = 'Partly Cloudy';
+let fg = 'Foggy';
+let rn = 'Wet';
+let sow = 'Snowy';*/
 
 
 function getCondition(condition){
 
-  const summary = document.getElementById('summary');
+  let summary = document.getElementById('summary');
   
 if (condition.includes('sunny') || condition.includes('clear') || condition.includes('warm')) {
     
@@ -155,9 +155,9 @@ if (condition.includes('snowstorm') || condition.includes('snow') || condition.i
 
 function changeSummaryImage(image) {
 
-  const rectangles = document.getElementById("rectangles");
-  const imagesummary = document.getElementById("imagesummary");
-  const summary = document.getElementById("summary").innerHTML;
+  let rectangles = document.getElementById("rectangles");
+  let imagesummary = document.getElementById("imagesummary");
+  let summary = document.getElementById("summary").innerHTML;
   
   if (image == 'clear'){
         rectangles.setAttribute("class", "clear");
