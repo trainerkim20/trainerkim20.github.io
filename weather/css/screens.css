@@ -210,6 +210,10 @@ footer {
     height: 361px;
 }
 
+.hide{
+    display: none;
+  }
+
    /* Background pictures for summary */
 .clear {
     background-image: url("/weather/images/clear400.jpg");
