@@ -6,14 +6,14 @@
 
 
 /*Variables for Function Use*/
-let temp = 31;
+/*let temp = 31;
 let speed = 5;
 buildWC(speed, temp);
-console.log(speed,temp);
+console.log(speed,temp);*/
 
-let direction = "N"; /*Set your own value*/
+/*let direction = "N"; /*Set your own value
 windDial(direction);
-console.log(direction);
+console.log(direction);*/
 
 /*let summary = document.getElementById("summary");*/
 let condition = "snow";

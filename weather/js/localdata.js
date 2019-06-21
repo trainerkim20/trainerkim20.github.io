@@ -34,11 +34,12 @@ function fetchData(weatherURL){
     console.log('fullName is: '+fullName);
 
     // Get the temperature data
-
+    let locTemp= g.Temp;
+    console.log(locTemp);
 
     // Get the wind data 
-
-
+    let wind = g.Wind;
+    console.log(wind);
     // Get the current conditions
 
 
@@ -63,13 +64,14 @@ function fetchData(weatherURL){
 
 
     // Set the temperature information
-
+    document.getElementById("curTemp").innerHTML = locTemp;
 
     // Set the wind information
-
+    document.getElementById("poiterspeed").innerHTML = wind;
 
     // Set the current conditions information
-
+    buildWC(wind,locTemp);
+    console.log()
 
     // Set the hourly temperature information
 
