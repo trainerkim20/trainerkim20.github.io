@@ -4,7 +4,7 @@ let pageNav = document.getElementById('bignav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 
-let weatherURL = "/weather/js/weather.json";
+let weatherURL = "js/weather.json";
 function fetchData(weatherURL){
   let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
