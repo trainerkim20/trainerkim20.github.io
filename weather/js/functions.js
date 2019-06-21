@@ -16,7 +16,7 @@ windDial(direction);
 console.log(direction);
 
 /*let summary = document.getElementById("summary");*/
-let condition = "wet";
+let condition = "snow";
 getCondition(condition);
 console.log(condition);
 
