@@ -41,9 +41,12 @@ function fetchData(weatherURL){
     let wind = g.Wind;
     console.log(wind);
     // Get the current conditions
-
+    let condition = g.Summary;
+    console.log(condition);
 
     // Get the hourly data 
+    let hours = g.Hourly;
+    console.log(hours);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -71,10 +74,10 @@ function fetchData(weatherURL){
 
     // Set the current conditions information
     buildWC(wind,locTemp);
-    console.log()
+    console.log(wind,locTemp);
 
     // Set the hourly temperature information
-
+document.getElementById("forecastlist").innerHTML = hours;
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
