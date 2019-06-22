@@ -39,14 +39,27 @@ main section {
     text-align: left;
 }
 
+.data {
+    border: 3px solid black;
+    
+}
+.data ul, p {
+    position: relative;
+    left: 135px;
+}
+
+
 section h1 { 
+    font-family: "Arial Black";
     font-size: 50px;
     height: 50px;
     border: 2px solid #000000;
     background-color: #FFFFFF;
     height: 70px;
     width: 100%;
-    padding-left: 60px;
+    padding-left: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 0px;
     
 } 
@@ -141,7 +154,7 @@ section h1 {
 
 #flip1 { 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
