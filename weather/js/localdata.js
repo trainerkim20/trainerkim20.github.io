@@ -40,6 +40,11 @@ function fetchData(weatherURL){
     // Get the wind data 
     let wind = g.Wind;
     console.log(wind);
+
+    // Get Dial Data 
+    let direct = g.Direction;
+    console.log(direct);
+
     // Get the current conditions
     let condition = g.Summary;
     console.log(condition);
@@ -71,6 +76,13 @@ function fetchData(weatherURL){
 
     // Set the wind information
     document.getElementById("poiterspeed").innerHTML = wind;
+
+    // Set the dial information 
+    document.getElementById("winddirection").innerHTML = direct; 
+
+    // Set dial direction
+    windDial(direction);
+    console(direction);
 
     // Set the current conditions information
     buildWC(wind,locTemp);

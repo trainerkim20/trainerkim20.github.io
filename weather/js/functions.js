@@ -16,7 +16,7 @@ windDial(direction);
 console.log(direction);*/
 
 /*let summary = document.getElementById("summary");*/
-let condition = "snow";
+let condition = "Thunderstorms";
 getCondition(condition);
 console.log(condition);
 
@@ -135,7 +135,7 @@ if (condition.includes('partly cloudy') || condition.includes('shady') || condit
   return "cloud";
 }
 
-if (condition.includes('wet') || condition.includes('rain') || condition.includes('Rainstorm')) {
+if (condition.includes('wet') || condition.includes('rain') || condition.includes('Rainstorm') || condition.includes('Thunderstorms')) {
   summary.innerHTML = "Rain";
   return "rain";
 }
