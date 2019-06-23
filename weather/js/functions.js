@@ -16,9 +16,9 @@ windDial(direction);
 console.log(direction);*/
 
 /*let summary = document.getElementById("summary");*/
-let condition = "Thunderstorms";
-getCondition(condition);
-console.log(condition);
+//let condition = "Thunderstorms";
+//getCondition(condition);
+//console.log(condition);
 
 let image= getCondition(condition);
 changeSummaryImage(image);

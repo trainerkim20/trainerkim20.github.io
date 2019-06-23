@@ -33,6 +33,16 @@ function fetchData(weatherURL){
     // See if it worked
     console.log('fullName is: '+fullName);
 
+    // Get Zip Data
+    let zip = g.Zip;
+    console.log(zip);
+
+    // Get Lat and Long Data
+    let long = g.Longitude;
+    let lat = g.Latitude;
+    console.log(long);
+    console.log(lat);
+
     // Get the temperature data
     let locTemp= g.Temp;
     console.log(locTemp);
@@ -43,7 +53,9 @@ function fetchData(weatherURL){
 
     // Get Dial Data 
     let direct = g.Direction;
+    let gusts = g.Gusts;
     console.log(direct);
+    console.log(gusts);
 
     // Get the current conditions
     let condition = g.Summary;
@@ -52,6 +64,10 @@ function fetchData(weatherURL){
     // Get the hourly data 
     let hours = g.Hourly;
     console.log(hours);
+
+    // Get Elevation data 
+    let elv = g.Elevation;
+    console.log(elv); 
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -71,6 +87,13 @@ function fetchData(weatherURL){
     // The h1 in main h1 should now say "Greenville, SC"
 
 
+    // Set Zip code
+    document.getElementById("zipper").innerHTML = zip;
+
+    //Set Long and Lat
+    document.getElementById("long").innerHTML = long;
+    document.getElementById("lat").innerHTML = lat;
+
     // Set the temperature information
     document.getElementById("curTemp").innerHTML = locTemp;
 
@@ -79,17 +102,29 @@ function fetchData(weatherURL){
 
     // Set the dial information 
     document.getElementById("winddirection").innerHTML = direct; 
+    document.getElementById("gust").innerHTML = gusts;
 
     // Set dial direction
-    windDial(direction);
-    console(direction);
+    windDial(direct);
+    console.log(direct);
 
     // Set the current conditions information
     buildWC(wind,locTemp);
     console.log(wind,locTemp);
 
+    // Set the current conditions
+    getCondition(condition);
+    console.log(condition);
+    let image= getCondition(condition);
+    changeSummaryImage(image);
+    console.log(image);
+
     // Set the hourly temperature information
-document.getElementById("forecastlist").innerHTML = hours;
+      document.getElementById("forecastlist").innerHTML = hours;
+
+    // set Elevation data
+    convertMeters(elv); 
+    console.log(elv);
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
