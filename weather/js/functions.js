@@ -20,9 +20,9 @@ console.log(direction);*/
 //getCondition(condition);
 //console.log(condition);
 
-let image= getCondition(condition);
-changeSummaryImage(image);
-console.log(image);
+//let image= getCondition(condition);
+//changeSummaryImage(image);
+//console.log(image);
 
 
 
