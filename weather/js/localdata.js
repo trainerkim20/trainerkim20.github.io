@@ -116,7 +116,7 @@ function fetchData(weatherURL){
     getCondition(condition);
     console.log(condition);
     document.getElementById("summary").innerHTML = condition;
-    let image= getCondition(condition);
+    let image = getCondition(condition);
     changeSummaryImage(image);
     console.log(image);
 
