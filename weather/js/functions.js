@@ -213,6 +213,8 @@ function format_time(hour) {
    return hour + amPM;
   }
 
+let hourlyTemps = [55, 55, 56, 57, 57, 57, 59, 59, 59, 60, 61, 63, 64];
+
   // Build the hourly temperature list
 function buildHourlyData(nextHour,hourlyTemps) {
   // Data comes from a JavaScript object of hourly temp name - value pairs

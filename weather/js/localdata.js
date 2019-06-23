@@ -122,7 +122,7 @@ function fetchData(weatherURL){
 
 
     // Set the hourly temperature information
-      document.getElementById("forecastlist").innerHTML = hours;
+    //document.getElementById("forecastlist").innerHTML = hours;
 
     // set Elevation data
     convertMeters(elv); 
