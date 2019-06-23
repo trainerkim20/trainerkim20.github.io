@@ -136,7 +136,7 @@ if (condition.includes('partly cloudy') || condition.includes('shady') || condit
 }
 
 if (condition.includes('wet') || condition.includes('rain') || condition.includes('Rainstorm') || condition.includes('Thunderstorms')) {
-  summary.innerHTML = "Rain";
+  //summary.innerHTML = "Rain";
   return "rain";
 }
 
