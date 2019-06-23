@@ -6,6 +6,10 @@ header {
     background-color: #000000; 
 }
 
+body {
+    width: 100%; 
+}
+
 #Title {
 
     margin: 0 auto;
@@ -46,6 +50,8 @@ main section {
 .data ul, p {
     position: relative;
     left: 135px;
+    font-family: "Cambria", serif;
+    font-size: 20px;
 }
 
 
@@ -58,8 +64,8 @@ section h1 {
     height: 70px;
     width: 100%;
     padding-left: 160px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
     margin: 0px;
     
 } 
@@ -162,7 +168,7 @@ section h1 {
 
 #flip2{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -170,7 +176,7 @@ section h1 {
 
 #flip3{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -178,7 +184,7 @@ section h1 {
 
 #flip4{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -186,7 +192,7 @@ section h1 {
 
 #flip5{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -194,7 +200,7 @@ section h1 {
 
 #flip6{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -202,7 +208,7 @@ section h1 {
 
 #flip7{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -210,7 +216,7 @@ section h1 {
 
 #flip8{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -218,7 +224,7 @@ section h1 {
 
 #flip9{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -226,7 +232,7 @@ section h1 {
 
 #flip10{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -234,7 +240,7 @@ section h1 {
 
 #flip11{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -242,7 +248,7 @@ section h1 {
 
 #flip12{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -250,7 +256,7 @@ section h1 {
 
 #flip13{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -258,7 +264,7 @@ section h1 {
 
 #flip14{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -266,7 +272,7 @@ section h1 {
 
 #flip15{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -274,7 +280,7 @@ section h1 {
 
 #flip16{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -282,7 +288,7 @@ section h1 {
 
 #flip17{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
@@ -290,8 +296,16 @@ section h1 {
 
 #flip18{ 
     position: absolute;
-    left: 5px;
+    left: 130px;
     height: 55px;
     width: 36px;
     background: no-repeat url("images/triangle.png");
+}
+
+footer {
+    background-color: #000000;
+    color: white; 
+    text-align: center;
+    border: 1px solid black;
+    padding: 30px; 
 }
