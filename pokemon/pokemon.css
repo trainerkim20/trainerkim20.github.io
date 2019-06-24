@@ -13,14 +13,19 @@ body {
 #Title {
 
     margin: 0 auto;
-    padding: 50px;
+    padding-top: 50px;
     color: #FFFFFF;
+    font-family: eurostile, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 65pt;
     width: 100%;
+    text-align: center;
 }
 
 #instructions {
 
+    margin-top: 40px;
     font-family: "Arial Black";
 
 }
@@ -50,7 +55,7 @@ main section {
 .data ul, p {
     position: relative;
     left: 135px;
-    font-family: "Cambria", serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
 }
 
@@ -156,6 +161,79 @@ section h1 {
 
 .open {
     transform: rotate(90deg);
+}
+
+#grasshead {
+    background-color: #6EBF31;
+    margin-top: 20px; 
+}
+
+#firehead {
+    background-color: #E03609;
+}
+
+#waterhead {
+    background-color: #2F91F2;
+}
+
+#bughead {
+    background-color: #88960E;
+}
+
+#darkhead {
+    background-color: #4D392C;
+}
+
+#dragonhead {
+    background-color: #755EDF;
+}
+
+#electrichead {
+    background-color: #FAB716;
+}
+
+#fairyhead {
+    background-color: #F1ABF1;
+}
+
+#fightinghead {
+    background-color: #7D311B;
+}
+
+#flyinghead {
+    background-color: #8094E7;
+}
+
+#ghosthead {
+    background-color: #6363A5;
+}
+
+#groundhead {
+    background-color: #D1B055;
+}
+
+#icehead {
+    background-color: #6DD3F5;
+}
+
+#normalhead {
+    background-color: #C7C2B9;
+}
+
+#poisonhead {
+    background-color: #762D78;
+}
+
+#psychichead {
+    background-color: #DC3267;
+}
+
+#rockhead {
+    background-color: #9E863D;
+}
+
+#steelhead {
+    background-color: #8E8E9F;
 }
 
 #flip1 { 
