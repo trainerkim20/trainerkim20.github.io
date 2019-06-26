@@ -59,6 +59,9 @@ main section {
     font-size: 20px;
 }
 
+.buttonborder h1:hover {
+    text-decoration: underline;
+}
 
 section h1 { 
     font-family: "Arial Black";
@@ -83,7 +86,7 @@ section h1 {
     width: 100%;
 }*/
 
-#grassdata {
+/*#grassdata {
     display: none;
 }
 
@@ -153,7 +156,7 @@ section h1 {
 
 #steeldata {
     display: none;
-}
+}*/
 
 .normal {
     transform: rotate(0deg);
