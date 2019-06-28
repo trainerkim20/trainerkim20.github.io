@@ -8,12 +8,14 @@ var idHeader = {
     }
   };
 
+  // Call the function to get our location
+    getGeoLocation();
+
 // Setup localStorage
 var storage = window.localStorage;
 //storage.clear();
 
-// Call the function to get our location
-getGeoLocation();
+
 
 // Gets longitude and latitude of current location
 function getGeoLocation() {
