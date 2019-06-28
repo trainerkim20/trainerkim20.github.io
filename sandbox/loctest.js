@@ -10,6 +10,7 @@ var idHeader = {
 
 // Setup localStorage
 var storage = window.localStorage;
+//storage.clear();
 
 // Call the function to get our location
 getGeoLocation();
@@ -115,7 +116,7 @@ function getWeather(stationId) {
     
       // Store weather information to localStorage 
 
-            storage.setItem('weatherinfo', data);
+            //storage.setItem('weatherinfo', data);
    
       // Build the page for viewing 
       

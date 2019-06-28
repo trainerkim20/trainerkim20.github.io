@@ -6,8 +6,10 @@ let contentContainer = document.getElementById('main-content');
 
 pageNav.addEventListener('click', function(evt){
 
-  // Get the city name
+  
   let cityName = evt.target.innerHTML; console.log(cityName);
+  console.log(cityName);
+  // Get the city name
   switch (cityName) {
     case "Franklin":
       case "Greenville":
