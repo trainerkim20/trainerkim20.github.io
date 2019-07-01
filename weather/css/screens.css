@@ -97,12 +97,15 @@ nav ul {
 
 #smallnav {
     display: inline;
+    /*position: absolute;*/
+    margin: 0px;
+    
 }
 
 nav li {
     background-color: #0e89d5;
     display: inline;
-    padding: 20px;
+    padding: 10px;
     
 }
 
@@ -113,6 +116,7 @@ nav a {
 
 footer {
     background-color: #0e89d5;
+    margin: 0px;
 }
 
 #hours {
