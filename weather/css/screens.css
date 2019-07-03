@@ -190,7 +190,7 @@ footer {
     
    }
 
-#poiterspeed {
+#pointspeed {
     position: absolute;
     left: 0;
     top: 570px;
@@ -291,10 +291,10 @@ footer {
         background-image: url("/weather/images/snow500.jpg")
     }*/
 
-    #poiterspeed {
+    #pointspeed {
         position: absolute;
         left: 0;
-        top: 450px;
+        top: 400px;
         width: 100%;
         text-align: center;
     

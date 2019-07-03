@@ -164,8 +164,12 @@ function getWeather(stationId) {
   
     // Store weather information to localStorage 
       let windgust = data.properties.windGust.value;
-      storage.setItem('Wind Gust', windgust);
- 
+      storage.setItem("Wind Gust", windgust);
+
+      let highTemp = data.properties.maxTemperatureLast24Hours.value;
+        storage.setItem("Max Temp", highTemp);
+      let lowTemp = data.properties.minTemperatureLast24Hours.value;
+        storage.setItem("Min Temp", lowTemp);
     // Build the page for viewing 
     
    }) 
@@ -177,16 +181,54 @@ function getWeather(stationId) {
 function buildPage(){
       // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
            
-      //Wind Dial
-         
-         //windDial(direction);
-         //winddirection.innerHTML = direction;
+      //Wind Dial 
+      let direction = storage.getItem("Wind Direction");
+      console.log(direction);
+      windDial(direction);
 
         //Wind Chill
-           // let WC = storage.getItem()
+        let speed = parseFloat(storage.getItem("Wind Speed"));
+        document.getElementById("poiterspeed").innerHTML = speed;
+        let temp = storage.getItem("Current Temp");
+        console.log(speed, temp);
+        buildWC(speed, temp);
+
+         
 
         // Task 2 - Populate location information
+        //State Name and Loc Name
+        let locName = storage.getItem("locName");
+        let locState = storage.getItem("locState");
+        document.getElementById("locName").innerHTML = locName;
+        document.getElementById("locState").innerHTML = locState;
+        //Elevation
+        let elevation = storage.setItem("stationElevation"); 
+        document.getElementById("elevation").innerHTML = elevation;
         // Task 3 - Populate weather information
+
+        //Current Temp
+        let currentTemp = storage.getItem("Current Temp");
+        document.getElementById("curTemp").innerHTML = currentTemp;
+        //Wind Gusts
+        let gust = storage.getItem("Wind Gust");
+      console.log(gust);
+      document.getElementById("gust").innerHTML = gust;
+
+      if(gust == "null") {
+        document.getElementById("gust").innerHTML = speed;
+      }
+      //High and Low Temp
+      let bigTemp = storage.getItem("Max Temp");
+      let smallTemp = storage.getItem("Min Temp");
+      console.log(bigTemp, smallTemp);
+      document.getElementById("bigTemp").innerHTML = bigTemp;
+      document.getElementById("smallTemp").innerHTML = smallTemp;
+
+      if(bigTemp == "null") {
+        let bigTemp = data.properties.minTemperatureLast24Hours.value;
+        storage.setItem("Max Temp", bigTemp);
+        document.getElementById("bigTemp").innerHTML = speed;
+      }
         // Task 4 - Hide status and show main
         }
 
@@ -217,9 +259,7 @@ function buildPage(){
               feelTemp.innerHTML = wc;
         }
         
-        let direction = storage.getItem("Wind Direction");
-        console.log(direction);
-        windDial(direction);
+        
 
 /*Wind Dial Function*/
 function windDial(direction){
