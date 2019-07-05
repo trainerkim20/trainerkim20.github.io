@@ -69,16 +69,38 @@ function getLocation(locale) {
     let stationsURL = data.properties.observationStations; 
     //URL for Hours
     let hoursURL = data.properties.forecastHourly;
+    //URL for Forecast
+ let forecastURL = data.properties.forecast;
+ buildPage(forecastURL);
+ console.log(hoursURL);
     // Call the function to get the list of weather stations
-    getStationId(stationsURL); 
+    getStationId(orecastURL); 
     //Call Hour
     getHourly(hoursURL);
     console.log(hoursURL);
+    //Call Build
+    getForecast(forecastURL);
+    console.log(forecastURL);
    }) 
   .catch(error => console.log('There was a getLocation error: ', error)) 
  } // end getLocation function
 
- function getHourly(hoursURL) {
+//  function getForecast(forecastURL); {
+//   fetch(forecastURL, idHeader) 
+//   .then(function(response){
+//     if(response.ok){ 
+//      return response.json(); 
+//     } 
+//     throw new ERROR('Response not OK.');
+//   })
+//   .then(function (data) { 
+//     // Let's see what we got back
+//     console.log('Json object from getForecast function:'); 
+//     console.log(data);
+//     // Store data to localstorage
+//  }
+
+function getHourly(hoursURL) {
   fetch(hoursURL, idHeader) 
   .then(function(response){
     if(response.ok){ 
@@ -170,6 +192,11 @@ function getWeather(stationId) {
         storage.setItem("Max Temp", highTemp);
       let lowTemp = data.properties.minTemperatureLast24Hours.value;
         storage.setItem("Min Temp", lowTemp);
+
+        let highTemp2 = data.properties.periods.number[1].temperature;
+        storage.setItem("Max Temp2", highTemp2);
+        let lowTemp2 = data.properties.periods.number[2].temperature;
+        storage.setItem("Min Temp2", lowTemp2);
     // Build the page for viewing 
     
    }) 
@@ -179,6 +206,11 @@ function getWeather(stationId) {
  buildPage();
       // Populate the current location weather page
 function buildPage(){
+
+  //Store more Forecast Data
+  
+
+
       // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
            
       //Wind Dial 
@@ -202,8 +234,10 @@ function buildPage(){
         document.getElementById("locName").innerHTML = locName;
         document.getElementById("locState").innerHTML = locState;
         //Elevation
-        let elevation = storage.setItem("stationElevation"); 
-        document.getElementById("elevation").innerHTML = elevation;
+        //let stationID = storage.getItem("stationId");
+        let elevation = storage.getItem("stationElevation"); 
+        convertMeters(elevation)
+        //document.getElementById("elevation").innerHTML = elevation;
         // Task 3 - Populate weather information
 
         //Current Temp
@@ -225,10 +259,19 @@ function buildPage(){
       document.getElementById("smallTemp").innerHTML = smallTemp;
 
       if(bigTemp == "null") {
-        let bigTemp = data.properties.minTemperatureLast24Hours.value;
-        storage.setItem("Max Temp", bigTemp);
-        document.getElementById("bigTemp").innerHTML = speed;
+        let bigTemp = storage.getItem("Max Temp2");  
+        document.getElementById("bigTemp").innerHTML = bigTemp;
       }
+      if(smallTemp == "null") {
+        let smallTemp = storage.getItem("Min Temp2");  
+        document.getElementById("smallTemp").innerHTML = smallTemp;
+      }
+
+      //Hourly Forecast
+      let hours = storage.getItem("Hourly Forecast");
+      buildHourlyData(nextHour,hours);
+      console.log(nextHour,hours);
+
         // Task 4 - Hide status and show main
         }
 
@@ -316,12 +359,7 @@ function windDial(direction){
              break;
            }
         }
-        
-        /*let cr = 'Sunny';
-        let cd = 'Partly Cloudy';
-        let fg = 'Foggy';
-        let rn = 'Wet';
-        let sow = 'Snowy';*/
+      
         
         
         function getCondition(condition){
@@ -435,4 +473,4 @@ function windDial(direction){
         
          
 
-console.log('My javascript is being read.');
+console.log('My javascript is being read.')
