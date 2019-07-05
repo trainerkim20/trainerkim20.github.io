@@ -67,38 +67,27 @@ function getLocation(locale) {
     // Next, get the weather station ID before requesting current conditions 
     // URL for station list is in the data object 
     let stationsURL = data.properties.observationStations; 
+    console.log(stationsURL);
     //URL for Hours
     let hoursURL = data.properties.forecastHourly;
+    console.log(hoursURL);
     //URL for Forecast
- let forecastURL = data.properties.forecast;
- buildPage(forecastURL);
- console.log(hoursURL);
+  // let forecastURL = data.properties.forecast;
+
+ 
     // Call the function to get the list of weather stations
-    getStationId(orecastURL); 
+    getStationId(stationsURL); 
     //Call Hour
     getHourly(hoursURL);
     console.log(hoursURL);
     //Call Build
-    getForecast(forecastURL);
-    console.log(forecastURL);
+    // getForecast(forecastURL);
+    // console.log(forecastURL);
    }) 
   .catch(error => console.log('There was a getLocation error: ', error)) 
  } // end getLocation function
 
-//  function getForecast(forecastURL); {
-//   fetch(forecastURL, idHeader) 
-//   .then(function(response){
-//     if(response.ok){ 
-//      return response.json(); 
-//     } 
-//     throw new ERROR('Response not OK.');
-//   })
-//   .then(function (data) { 
-//     // Let's see what we got back
-//     console.log('Json object from getForecast function:'); 
-//     console.log(data);
-//     // Store data to localstorage
-//  }
+ 
 
 function getHourly(hoursURL) {
   fetch(hoursURL, idHeader) 
@@ -193,16 +182,33 @@ function getWeather(stationId) {
       let lowTemp = data.properties.minTemperatureLast24Hours.value;
         storage.setItem("Min Temp", lowTemp);
 
-        let highTemp2 = data.properties.periods.number[1].temperature;
-        storage.setItem("Max Temp2", highTemp2);
-        let lowTemp2 = data.properties.periods.number[2].temperature;
-        storage.setItem("Min Temp2", lowTemp2);
+        
     // Build the page for viewing 
     
    }) 
   .catch(error => console.log('There was a getWeather error: ', error)) 
  } // end getWeather function
 
+//  function getForecast(forecastURL); {
+//   fetch(forecastURL, idHeader) 
+//   .then(function(response){
+//     if(response.ok){ 
+//      return response.json(); 
+//     } 
+//     throw new ERROR('Response not OK.');
+//   })
+//   .then(function (data) { 
+//     // Let's see what we got back
+//     console.log('Json object from getForecast function:'); 
+//     console.log(data);
+//     // Store data to localstorage
+//     let highTemp2 = data.properties.periods.number[1].temperature;
+//         storage.setItem("Max Temp2", highTemp2);
+//         let lowTemp2 = data.properties.periods.number[2].temperature;
+//         storage.setItem("Min Temp2", lowTemp2);
+//  }
+
+ 
  buildPage();
       // Populate the current location weather page
 function buildPage(){
@@ -238,6 +244,8 @@ function buildPage(){
         let elevation = storage.getItem("stationElevation"); 
         convertMeters(elevation)
         //document.getElementById("elevation").innerHTML = elevation;
+
+        
         // Task 3 - Populate weather information
 
         //Current Temp

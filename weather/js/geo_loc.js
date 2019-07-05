@@ -31,6 +31,9 @@ var storage = window.localStorage;
           const locale = lat + "," + long;
           console.log(`Lat and Long are: ${locale}.`);
 
+          document.getElementById("long").innerHTML = lat;
+          document.getElementById("lat").innerHTML = long;
+
           // Call getLocation function, send locale
           getLocation(locale);
          })
