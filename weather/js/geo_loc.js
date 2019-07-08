@@ -110,6 +110,7 @@ function getHourly(hoursURL) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
+   
    let hourlyTemps = JSON.parse(storage.getItem("Hourly Forecast"));
    buildHourlyData(nextHour,hourlyTemps);
  
