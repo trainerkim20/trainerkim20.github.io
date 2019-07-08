@@ -88,7 +88,7 @@ nav ul {
     background-color: #0e89d5;
     padding: 20px;
     margin-top: 0px;
-
+    width: 100%;
 }
 
 #bignav {
@@ -96,9 +96,13 @@ nav ul {
 }
 
 #smallnav {
-    display: inline;
-    /*position: absolute;*/
+    display: flex;
+    position: fixed;
+    bottom: 0;
     margin: 0px;
+    width: 100%;
+    overflow: auto;
+    font-size: 13px;
     
 }
 
@@ -129,7 +133,7 @@ footer {
     
 }
 
-#forecastlist {
+#hourlyforecast {
     white-space: nowrap;
     overflow: auto;
 }
@@ -212,21 +216,22 @@ footer {
     width: 50%;
 }
 
-#imagesummary {
+/*#imagesummary {
     display: block;
     margin: 0 auto;
     width: 400px;
     height: 361px;
-}
+}*/
 
-/* .hide {
+ .hide {
     display: none;
-  } */
+  } 
 
    /* Background pictures for summary */
 .clear {
     background-image: url("/weather/images/clear400.jpg");
    }
+   
 
 .cloud {
     background-image: url("/weather/images/clouds400.jpg")
@@ -244,21 +249,31 @@ footer {
     background-image: url("/weather/images/snow400.jpg")
 }
 
+#imagesummary {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    
+}
+
 /*4.  Large Screen Styles (Media Queries begin here)*/
 
 @media only screen and (min-width: 600px) {
     #bignav {
         display: inline;
+        overflow: auto;
     }
 
     #smallnav {
         display: none;
+        margin: 0px;
     }
 
-    #hours h2 {
+    /* #hours h2 {
         text-align: left;
         
-    }
+    } */
 
     #rectangles {
         display: flex;
@@ -294,17 +309,17 @@ footer {
     #pointspeed {
         position: absolute;
         left: 0;
-        top: 400px;
+        top: 340px;
         width: 100%;
         text-align: center;
     
     }
 
-    /*#imagesummary {
-        display: block;
-        margin: 0 auto;
-        width: 500px;
-        height: 451px;
-    }*/
+    footer {
+        background-color: #0e89d5;
+        margin: 0px;
+    }
+
+    
 
 }

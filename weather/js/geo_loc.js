@@ -1,3 +1,6 @@
+let statusContainer = document.getElementById('status');
+let contentContainer = document.getElementById('main-content');
+
 //these functions will work together to get weather informaton for the current location and populate a web page with the data.
 'use strict';
 
@@ -26,17 +29,29 @@ var storage = window.localStorage;
         navigator.geolocation.getCurrentPosition(function (position) {          
           const lat = position.coords.latitude;
           const long = position.coords.longitude;
+
+          storage.setItem("Lat", lat);
+          storage.setItem("Long", lat);
       
           // Combine the values
           const locale = lat + "," + long;
           console.log(`Lat and Long are: ${locale}.`);
 
-          document.getElementById("long").innerHTML = lat;
-          document.getElementById("lat").innerHTML = long;
+          let latr = Math.floor(lat * 100) / 100;
+          let longr = Math.floor(long * 100) / 100;
 
+          document.getElementById("long").innerHTML = latr;
+          document.getElementById("lat").innerHTML = longr;
+
+          
           // Call getLocation function, send locale
           getLocation(locale);
+          //Hide Status 
+
+            status.setAttribute("class", "hide");
          })
+
+
 
         } else {
          status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
@@ -132,6 +147,11 @@ let nextHour = date.getHours() + 1;
 
    document.getElementById("hourlyforecast").innerHTML = buildHourlyData(nextHour,hourlyTemps);
  
+
+   contentContainer.setAttribute('class', ''); 
+   statusContainer.setAttribute('class', 'hide'); 
+    
+
 
 // Gets location information from the NWS API
 // function getLocation(locale) {
