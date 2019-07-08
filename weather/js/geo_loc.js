@@ -41,10 +41,94 @@ var storage = window.localStorage;
         } else {
          status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
         } // end else
-
-        
-
 } // end getGeoLocation
+
+function getHourly(hoursURL) {
+  fetch(hoursURL, idHeader) 
+  .then(function(response){
+    if(response.ok){ 
+     return response.json(); 
+    } 
+    throw new ERROR('Response not OK.');
+  })
+  .then(function (data) { 
+    // Let's see what we got back
+    console.log('Json object from getHourly function:'); 
+    console.log(data);
+
+    //Store Hourly Forecast
+    // let hourlyforecast =[data.properties.periods[1].temperature, data.properties.periods[2].temperature, data.properties.periods[3].temperature, 
+    // data.properties.periods[4].temperature, data.properties.periods[5].temperature, data.properties.periods[6].temperature, 
+    // data.properties.periods[7].temperature, data.properties.periods[8].temperature, data.properties.periods[9].temperature, 
+    // data.properties.periods[10].temperature, data.properties.periods[11].temperature, 
+    // data.properties.periods[12].temperature, data.properties.periods[13].temperature];
+
+    let hourlyforecast = new Array(0);
+    for (let i = 1, x = 13; i < x; i++) {
+
+      hourlyforecast.push(data.properties.periods[i].temperature);
+    }
+    console.log('Hourly Forcast is ' + hourlyforecast);
+
+    storage.setItem("Hourly Forecast", hourlyforecast);
+
+    let windDirection = data.properties.periods[0].windDirection;
+    let windSpeed = data.properties.periods[0].windSpeed;
+    let tempNow = data.properties.periods[0].temperature;
+
+    storage.setItem("Wind Direction", windDirection);
+    storage.setItem("Wind Speed", windSpeed);
+    storage.setItem("Current Temp", tempNow);
+
+    let wd = storage.getItem("Wind Direction")
+    document.getElementById("winddirection").innerHTML = wd;
+}) 
+.catch(error => console.log('There was a getHourly error: ', error)) 
+} // end getHourly function
+
+ 
+ 
+ /*A function that will convert and format hours to a 12 hour format*/
+ function format_time(hour) {
+   if(hour > 23){ 
+     hour -= 24; 
+    } 
+    let amPM = (hour > 11) ? "pm" : "am"; 
+    if(hour > 12) { 
+     hour -= 12; 
+    } 
+    if(hour == 0) { 
+     hour = "12"; 
+    } 
+    return hour + amPM;
+   }
+ 
+   //
+
+// Get the next hour based on the current time
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+   let hourlyTemps = JSON.parse(storage.getItem("Hourly Forecast"));
+   buildHourlyData(nextHour,hourlyTemps);
+ 
+   // Build the hourly temperature list
+ function buildHourlyData(nextHour,hourlyTemps) {
+   // Data comes from a JavaScript object of hourly temp name - value pairs
+   // Next hour should have a value between 0-23
+   // The hourlyTemps variable holds an array of temperatures
+   // Line 8 builds a list item showing the time for the next hour 
+   // and then the first element (value in index 0) from the hourly temps array
+    let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F | </li>';
+    // Build the remaining list items using a for loop
+    for (let i = 1, x = 12; i < x; i++) {
+     hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F | </li>';
+    }
+    console.log('HourlyList is: ' + hourlyListItems);
+    return hourlyListItems;
+   }
+
+   document.getElementById("hourlyforecast").innerHTML = buildHourlyData(nextHour,hourlyTemps);
+ 
 
 // Gets location information from the NWS API
 // function getLocation(locale) {

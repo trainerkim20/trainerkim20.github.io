@@ -20,7 +20,7 @@ console.log(direction);*/
 //getCondition(condition);
 //console.log(condition);
 
-//let image= getCondition(condition);
+//
 //changeSummaryImage(image);
 //console.log(image);
 
@@ -72,7 +72,7 @@ function getLocation(locale) {
     let hoursURL = data.properties.forecastHourly;
     console.log(hoursURL);
     //URL for Forecast
-  // let forecastURL = data.properties.forecast;
+  //let forecastURL = data.properties.forecast;
 
  
     // Call the function to get the list of weather stations
@@ -81,49 +81,15 @@ function getLocation(locale) {
     getHourly(hoursURL);
     console.log(hoursURL);
     //Call Build
-    // getForecast(forecastURL);
-    // console.log(forecastURL);
+    //getForecast(forecastURL);
+    //console.log(forecastURL);
    }) 
   .catch(error => console.log('There was a getLocation error: ', error)) 
  } // end getLocation function
 
  
 
-function getHourly(hoursURL) {
-  fetch(hoursURL, idHeader) 
-  .then(function(response){
-    if(response.ok){ 
-     return response.json(); 
-    } 
-    throw new ERROR('Response not OK.');
-  })
-  .then(function (data) { 
-    // Let's see what we got back
-    console.log('Json object from getHourly function:'); 
-    console.log(data);
 
-    //Store Hourly Forecast
-    let hourlyforecast =[data.properties.periods[1].temperature, data.properties.periods[2].temperature, data.properties.periods[3].temperature, 
-    data.properties.periods[4].temperature, data.properties.periods[5].temperature, data.properties.periods[6].temperature, 
-    data.properties.periods[7].temperature, data.properties.periods[8].temperature, data.properties.periods[9].temperature, 
-    data.properties.periods[10].temperature, data.properties.periods[11].temperature, 
-    data.properties.periods[12].temperature, data.properties.periods[13].temperature];
-
-    storage.setItem("Hourly Forecast", hourlyforecast);
-
-    let windDirection = data.properties.periods[0].windDirection;
-    let windSpeed = data.properties.periods[0].windSpeed;
-    let tempNow = data.properties.periods[0].temperature;
-
-    storage.setItem("Wind Direction", windDirection);
-    storage.setItem("Wind Speed", windSpeed);
-    storage.setItem("Current Temp", tempNow);
-
-    let wd = storage.getItem("Wind Direction")
-    document.getElementById("winddirection").innerHTML = wd;
-}) 
-.catch(error => console.log('There was a getHourly error: ', error)) 
-} // end getHourly function
 // }
 
  // Gets weather station list and the nearest weather station ID from the NWS API
@@ -181,6 +147,9 @@ function getWeather(stationId) {
         storage.setItem("Max Temp", highTemp);
       let lowTemp = data.properties.minTemperatureLast24Hours.value;
         storage.setItem("Min Temp", lowTemp);
+
+        //let summary = data.properties.textDescription;
+        storage.setItem("Summary", data.properties.textDescription);
 
         
     // Build the page for viewing 
@@ -242,7 +211,7 @@ function buildPage(){
         //Elevation
         //let stationID = storage.getItem("stationId");
         let elevation = storage.getItem("stationElevation"); 
-        convertMeters(elevation)
+        convertMeters(elevation);
         //document.getElementById("elevation").innerHTML = elevation;
 
         
@@ -266,14 +235,24 @@ function buildPage(){
       document.getElementById("bigTemp").innerHTML = bigTemp;
       document.getElementById("smallTemp").innerHTML = smallTemp;
 
-      if(bigTemp == "null") {
-        let bigTemp = storage.getItem("Max Temp2");  
-        document.getElementById("bigTemp").innerHTML = bigTemp;
+      if(bigTemp == "null") {  
+        document.getElementById("bigTemp").innerHTML = "No Data";
       }
       if(smallTemp == "null") {
-        let smallTemp = storage.getItem("Min Temp2");  
-        document.getElementById("smallTemp").innerHTML = smallTemp;
+        // let smallTemp = storage.getItem("Min Temp2");  
+        document.getElementById("smallTemp").innerHTML = "No Data";
       }
+
+      //Image Switch
+      let textDescription = storage.getItem("Summary");
+      let condition = textDescription.toLowerCase();
+      console.log(textDescription);
+      getCondition(condition);
+
+      let image = getCondition(condition);
+      console.log(image);
+      changeSummaryImage(image);
+      
 
       //Hourly Forecast
       let hours = storage.getItem("Hourly Forecast");
@@ -368,7 +347,7 @@ function windDial(direction){
            }
         }
       
-        
+       
         
         function getCondition(condition){
         
@@ -386,7 +365,7 @@ function windDial(direction){
         }
         
         if (condition.includes('wet') || condition.includes('rain') || condition.includes('Rainstorm') || condition.includes('Thunderstorms')) {
-          //summary.innerHTML = "Rain";
+          summary.innerHTML = "Rain";
           return "rain";
         }
         
@@ -399,13 +378,12 @@ function windDial(direction){
           return "snow";
         }
         }
-        
          
         function changeSummaryImage(image) {
         
           let rectangles = document.getElementById("rectangles");
           let imagesummary = document.getElementById("imagesummary");
-          let summary = document.getElementById("summary").innerHTML;
+          //let summary = document.getElementById("summary").innerHTML;
           
           if (image == 'clear'){
                 rectangles.setAttribute("class", "clear");
@@ -442,43 +420,7 @@ function windDial(direction){
         
         }
         
-        // Get the next hour based on the current time
-        let date = new Date(); 
-        let nextHour = date.getHours() + 1;
-        
-        /*A function that will convert and format hours to a 12 hour format*/
-        function format_time(hour) {
-          if(hour > 23){ 
-            hour -= 24; 
-           } 
-           let amPM = (hour > 11) ? "pm" : "am"; 
-           if(hour > 12) { 
-            hour -= 12; 
-           } 
-           if(hour == 0) { 
-            hour = "12"; 
-           } 
-           return hour + amPM;
-          }
-        
-        let hourlyTemps = [55, 55, 56, 57, 57, 57, 59, 59, 59, 60, 61, 63, 64];
-        
-          // Build the hourly temperature list
-        function buildHourlyData(nextHour,hourlyTemps) {
-          // Data comes from a JavaScript object of hourly temp name - value pairs
-          // Next hour should have a value between 0-23
-          // The hourlyTemps variable holds an array of temperatures
-          // Line 8 builds a list item showing the time for the next hour 
-          // and then the first element (value in index 0) from the hourly temps array
-           let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
-           // Build the remaining list items using a for loop
-           for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-            hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
-           }
-           console.log('HourlyList is: ' +hourlyListItems);
-           return hourlyListItems;
-          }
-        
+       
          
 
 console.log('My javascript is being read.')
