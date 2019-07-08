@@ -256,8 +256,8 @@ function buildPage(){
 
       //Hourly Forecast
       let hours = storage.getItem("Hourly Forecast");
-      buildHourlyData(nextHour,hours);
-      console.log(nextHour,hours);
+      //buildHourlyData(nextHour,hours);
+      //console.log(nextHour,hours);
 
         // Task 4 - Hide status and show main
         }

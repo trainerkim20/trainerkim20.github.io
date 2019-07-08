@@ -63,6 +63,7 @@ function getHourly(hoursURL) {
     // data.properties.periods[10].temperature, data.properties.periods[11].temperature, 
     // data.properties.periods[12].temperature, data.properties.periods[13].temperature];
 
+    
     let hourlyforecast = new Array(0);
     for (let i = 1, x = 13; i < x; i++) {
 
@@ -70,7 +71,8 @@ function getHourly(hoursURL) {
     }
     console.log('Hourly Forcast is ' + hourlyforecast);
 
-    storage.setItem("Hourly Forecast", hourlyforecast);
+
+    storage.setItem("Hourly Forecast", JSON.stringify(hourlyforecast));
 
     let windDirection = data.properties.periods[0].windDirection;
     let windSpeed = data.properties.periods[0].windSpeed;
