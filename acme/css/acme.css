@@ -1,0 +1,39 @@
+body {
+ background-image: url("/acme/images/site/background.jpg");
+ 
+}
+
+#whites {
+    background-color: #ffffff;
+}
+
+header ul {
+    background-color: #de2226;
+}
+
+header li {
+    display: inline; 
+    list-style-type: none;
+    
+}
+
+footer {
+    text-align: center;
+}
+
+/* List settings for the mobile version
+/* ul {
+    width: 40%;
+    display: flex; 
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+li {
+    width: 400px;
+    flex: 0 1 50%;
+    border: solid 2px #000;
+    text-align: center;
+} */
