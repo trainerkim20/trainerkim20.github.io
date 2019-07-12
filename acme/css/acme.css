@@ -7,14 +7,28 @@ body {
     background-color: #ffffff;
 }
 
+header img {
+    padding: 10px;
+}
+
 header ul {
+    
     background-color: #de2226;
+    padding: 20px;
 }
 
 header li {
+    position: relative;
+    left: -10px;
     display: inline; 
     list-style-type: none;
+    padding: 10px;
+    color:  #ffffff;
     
+}
+
+h1 {
+    padding: 10px;
 }
 
 footer {
