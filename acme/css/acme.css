@@ -1,5 +1,6 @@
 body {
  background-image: url("/acme/images/site/background.jpg");
+ background-size: cover;
  
 }
 
