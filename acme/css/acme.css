@@ -35,7 +35,7 @@ header li {
 }
 
 main {
-    height: 1000px;
+    height: 800px;
     font-size: 20px;
 }
 
@@ -66,28 +66,32 @@ footer {
     margin: 0;
 }
 
-#column1, #column2 {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    width: 50%;
-    /*height: 324px;*/
-    float: left;
-    margin: 1px;
-    padding: 1px;
+#column1, #column {
+    flex-flow: column;
+    /* flex-direction: row; */
     
     
 }
 
-#recipe ul {
+#recipe {
+    text-align: center;
+    width: 400px;
+    flex: 0 1 50%;
+    border: solid 1px grey;
+    text-align: center;
+    background-color: grey;
+}
+
+/* #column2 {
     width: 50%;
     display: flex; 
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-    margin: 0;
-
+    margin: 0; 
 }
+
+
 /* #recipe li {
     width: 50px;
     
@@ -116,7 +120,7 @@ footer {
 
 #left {
     position: absolute;
-    left: 1px;
+    left: 5px;
     top: 200px;
 }
 
