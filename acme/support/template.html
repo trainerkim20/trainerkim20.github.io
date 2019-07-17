@@ -19,7 +19,7 @@
         </header>
         <main>
         
-        <div id="homepage">
+        <main id="homepage">
                         <h1>Welcome to ACME</h1>
                 <img src="/acme/images/site/feature.jpg" id="featureImg"/>
                 <ul id="rocket">
@@ -31,12 +31,22 @@
                       </ul>
                       
                 <div id="column1">
-                <ul id="recipe">   
-                <li><a href="#"><img src="/acme/images/recipes/bbqsand.jpg" alt="BBQ Sandwich"/>Pulled Roadrunner BBQ</a></li>
-                <li><a href="#"><img src="/acme/images/recipes/potpie.jpg" alt="Pot Pie"/>Roadrunner Pot Pie</a></li>
-                <li><a href="#"><img src="/acme/images/recipes/soup.jpg" alt="Pot Pie"/>Roadrunner Soup</a></li>
-                <li><a href="#"><img src="/acme/images/recipes/taco.jpg" alt="Pot Pie"/>Roadrunner Tacos</a></li>
-                </ul>   
+                <section id="recipe"> 
+                        <div id="BBQ">
+                                <img src="/acme/images/recipes/bbqsand.jpg" alt="BBQ Sandwich"/>
+                <p><a href="#">Pulled Roadrunner BBQ</a></p></div>
+                <div id="pie">
+                <img src="/acme/images/recipes/potpie.jpg" alt="Pot Pie"/></div>
+                <p><a href="#">Roadrunner Pot Pie</a></p></div>
+                
+                                <div id="soup">
+                <img src="/acme/images/recipes/soup.jpg" alt="Soups"/></div>
+                <p><a href="#">Roadrunner Soup</a></p>
+                <div id="taco"></div>
+                <img src="/acme/images/recipes/taco.jpg" alt="Tacos"/>
+                <p><a href="#">Roadrunner Tacos</a></p></div>
+                
+                </section>   
         </div>
         <div id="column2">
                         <ul id="reviews">
@@ -53,10 +63,12 @@
         <div id="content" class="hide">
         <h1 id="heading"></h1>
         <img src="#" id="image"/>
+        <div id="right">
         <p id="description"></p>
         <p><b>Made by: </b><span id="manufacturer"></span></p>
-        <p><b>Reviews: </b><span id="reviews"></span></p>
+        <p><b>Reviews: </b><span id="review"></span></p>
         <p><b>Price: </b><span id="price"></span></p>
+</div>
 </div>
 
         </main>

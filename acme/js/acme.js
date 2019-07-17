@@ -91,7 +91,7 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
             document.getElementById("manufacturer").innerHTML = manufacturer;
 
             let review = g.reviews;
-            document.getElementById("reviews").innerHTML = review;
+            document.getElementById("review").innerHTML = review;
 
             let price = g.price;
             document.getElementById("price").innerHTML = price;

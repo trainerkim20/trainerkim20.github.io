@@ -1,6 +1,8 @@
 body {
  background-image: url("/acme/images/site/background.jpg");
  background-size: cover;
+ font-family: sans-serif;
+ 
  
 }
 
@@ -34,6 +36,7 @@ header li {
 
 main {
     height: 1000px;
+    font-size: 20px;
 }
 
 h1 {
@@ -67,7 +70,7 @@ footer {
     position: relative;
     top: 10%;
     left: 10%;
-    width: 200px;
+    width: 50%;
     /*height: 324px;*/
     float: left;
     margin: 10px;
@@ -77,7 +80,7 @@ footer {
 }
 
 #recipe ul {
-    width: 40%;
+    width: 50%;
     display: flex; 
     flex-wrap: wrap;
     list-style-type: none;
@@ -95,6 +98,19 @@ footer {
 
 #recipe img {
     align-self: center; 
+}
+
+/*Content Pages CSS*/
+
+/* #heading {
+
+} */
+
+#right {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 500px;
 }
 
 /* List settings for the mobile version
