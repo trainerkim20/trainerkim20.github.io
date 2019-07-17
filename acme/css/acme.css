@@ -4,6 +4,10 @@ body {
  
 }
 
+.hide {
+    display: none;
+}
+
 #whites {
     background-color: #ffffff;
 }
