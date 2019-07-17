@@ -80,7 +80,7 @@ footer {
 }
 
 #recipe ul {
-    width: 40%;
+    width: 50%;
     display: flex; 
     flex-wrap: wrap;
     list-style-type: none;
@@ -88,7 +88,7 @@ footer {
     margin: 0;
 
 }
-#recipe li {
+/* #recipe li {
     width: 50px;
     
     border: solid 2px grey;
@@ -96,11 +96,11 @@ footer {
     background-color: grey;
     margin: 0;
     padding: 0;
-}
+} */
 
-#recipe img {
+/* #recipe img {
     align-self: center; 
-}
+} */
 
 /*Content Pages CSS*/
 
@@ -108,12 +108,24 @@ footer {
 
 } */
 
+#content img {
+    position: relative; 
+    top: 10px;
+    left: 1px;
+}
+
+#left {
+    position: absolute;
+    left: 1px;
+    top: 200px;
+}
+
 #right {
     width: 500px;
     position: absolute;
     left: 50%;
     top: 500px;
-}
+} 
 
 /* List settings for the mobile version
 /* ul {
