@@ -77,8 +77,12 @@ footer {
     text-align: center;
     width: 400px;
     flex: 0 1 50%;
-    border: solid 1px grey;
+    border: solid 1px white;
     text-align: center;
+    
+}
+
+#recipe div {
     background-color: grey;
 }
 
