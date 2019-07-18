@@ -12,7 +12,7 @@ var idHeader = {
 // Setup localStorage
 var storage = window.localStorage;
 //storage.clear();
-
+let pageTitle = document.getElementById('page-title');
 let acmeURL = "js/acme.json";
 let pageNav = document.getElementById('pagenav');
 let home = document.getElementById('homepage');

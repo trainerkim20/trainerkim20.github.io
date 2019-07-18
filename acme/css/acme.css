@@ -2,6 +2,8 @@ body {
  background-image: url("/acme/images/site/background.jpg");
  background-size: cover;
  font-family: sans-serif;
+ margin-left:auto;
+ margin-right:auto;
  
  
 }
@@ -47,18 +49,22 @@ footer {
     text-align: center;
 }
 
+@media only screen and (min-width: 600px) {
 /*Home Page CSS*/
 
 #featureImg {
     width: 100%;
 }
 #rocket {
+
+/*Need to figure out positions*/
     color: #de2226;
     list-style-type: none;
-    position: absolute;
+    flex-flow: wrap;  
     z-index: 1;
-    top: 350px;
-    left: 900px;
+    /* top: ;
+    left: ; */
+    flex: 0 350px 900px;
 }
 
 #rocket h2 {
@@ -76,14 +82,17 @@ footer {
 #recipe {
     text-align: center;
     width: 400px;
-    flex: 0 1 50%;
-    border: solid 1px white;
+    flex: 0 2 50%;
+    flex-direction: column;
+    flex-flow: row;
     text-align: center;
     
 }
 
 #recipe div {
     background-color: grey;
+    border: solid 1px white;
+    width: 300px;
 }
 
 /* #column2 {
@@ -112,9 +121,6 @@ footer {
 
 /*Content Pages CSS*/
 
-/* #heading {
-
-} */
 
 #content img {
     position: relative; 
@@ -123,17 +129,32 @@ footer {
 }
 
 #left {
-    position: absolute;
+    flex-flow: wrap; 
+    flex-direction: column;
+    justify-content: flex-start;
     left: 5px;
     top: 200px;
 }
 
 #right {
+    flex-flow: wrap; 
+    flex-direction: row;
+    justify-content: flex-end;
     width: 500px;
-    position: absolute;
     left: 50%;
     top: 500px;
 } 
+
+.content {
+    flex-flow: wrap;
+    flex-flow: row;
+
+} 
+
+#priceline {
+    color: #990033;
+    font-size: 50px;
+}
 
 /* List settings for the mobile version
 /* ul {
@@ -151,3 +172,5 @@ li {
     border: solid 2px #000;
     text-align: center;
 } */
+
+}
