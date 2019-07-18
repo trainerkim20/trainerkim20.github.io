@@ -22,7 +22,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 65pt;
-    width: 100%;
+    width: 1265px;
     text-align: center;
 }
 
@@ -47,9 +47,9 @@ main {
     align-content: center;
 }
 
-main h1 {
+/* main h1 {
     width: 1265px;
-}
+} */
 
 main section {
     text-align: left;
@@ -57,7 +57,7 @@ main section {
 }
 
 .data {
-    border: 3px solid black;
+    /* border: 3px solid black; */
     width: 1265px;
     
 }
@@ -66,6 +66,7 @@ main section {
     left: 135px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
+    width: 1095px;
 }
 
 .buttonborder h1:hover {
@@ -84,6 +85,7 @@ section h1 {
     /*padding-top: 5px;
     padding-bottom: 5px;*/
     margin: 0px;
+    width: 1100px;
     
 } 
 
@@ -398,6 +400,7 @@ footer {
     text-align: center;
     border: 1px solid black;
     padding: 30px; 
+    width: 1203px;
 }
 
 @media only screen and (max-width: 600px) {
