@@ -2,12 +2,15 @@ header {
     /*text-transform: uppercase;*/
     border: 1px solid #000000; 
     height: 192px;
-    width: 100%;
+    width: 1265px;
     background-color: #000000; 
 }
 
 body {
-    width: 100%; 
+    width: 1265px; 
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 0;
 }
 
 #Title {
@@ -44,12 +47,18 @@ main {
     align-content: center;
 }
 
+main h1 {
+    width: 1265px;
+}
+
 main section {
     text-align: left;
+    width: 1265px;
 }
 
 .data {
     border: 3px solid black;
+    width: 1265px;
     
 }
 .data ul, p {
@@ -70,7 +79,7 @@ section h1 {
     border: 2px solid #000000;
     background-color: #FFFFFF;
     height: 70px;
-    width: 100%;
+    /* width: 1265px; */
     padding-left: 160px;
     /*padding-top: 5px;
     padding-bottom: 5px;*/
@@ -389,4 +398,92 @@ footer {
     text-align: center;
     border: 1px solid black;
     padding: 30px; 
+}
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        width: 600px; 
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 0;
+    }
+   
+    #Title {
+
+        /* margin: 0 auto; */
+        color: #FFFFFF;
+        font-family: eurostile, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30pt;
+        width: 607px;
+        text-align: center;
+    }
+
+    header {
+        /*text-transform: uppercase;*/
+        border: 1px solid #000000; 
+        height: 90px;
+        width: 607px;
+        background-color: #000000; 
+    }
+
+    .data {
+        border: none;   
+        width: 600px;  
+    }
+
+    .data ul, p {
+        position: relative;
+        left: 135px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+        width: 400px;
+    }
+
+    main {
+        text-align: center;
+        align-content: center;
+        width: 607px;
+    }
+    
+    main h1 {
+        width: 607px;
+    }
+    
+    main section {
+        text-align: left;
+        width: 600px;
+    }
+
+    #grasshead {
+        background-color: #6EBF31;
+        margin-top: 20px;
+        width: 447px; 
+    }
+
+    section h1 { 
+        font-family: "Arial Black";
+        font-size: 50px;
+        height: 50px;
+        border: 2px solid #000000;
+        background-color: #FFFFFF;
+        height: 70px;
+        width: 447px;
+        padding-left: 160px;
+        /*padding-top: 5px;
+        padding-bottom: 5px;*/
+        margin: 0px;
+        
+    } 
+
+    footer {
+        background-color: #000000;
+        color: white; 
+        text-align: right;
+        border: 1px solid black;
+        padding: 30px; 
+        width: 550px;
+    }
 }
