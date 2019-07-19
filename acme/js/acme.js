@@ -17,7 +17,7 @@ let acmeURL = "js/acme.json";
 let pageNav = document.getElementById('pagenav');
 let home = document.getElementById('homepage');
 let contentContainer = document.getElementById('content');
-
+getData();
 let productData = JSON.parse(storage.getItem("Object Name"));
 navigationBar(productData);
 function navigationBar(productData) {
@@ -62,7 +62,7 @@ pageNav.addEventListener('click', function (evt) {
             break;
     }
 
-getData();
+// getData();
 function getData() {
     fetch(acmeURL)
         .then(function (response) {
