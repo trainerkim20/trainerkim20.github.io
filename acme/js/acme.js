@@ -100,12 +100,6 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
 
         })
 }
-// let home = document.getElementById('home');
-//     home.innerHTML= "Home";
-    //, url("template.html");
-
-
-
 
     fetch(acmeURL)
         .then(function (response) {
