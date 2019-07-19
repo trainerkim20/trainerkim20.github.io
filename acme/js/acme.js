@@ -52,7 +52,7 @@ let objectNames = Object.keys(data);
 console.log(objectNames);
 storage.setItem("Object Name", JSON.stringify(objectNames));
 
-            let g = data[objectNames[1]];
+            let g = data[objectNames];
             storage.setItem("JSON", JSON.stringify(g));
 
             let productname = g.name;
