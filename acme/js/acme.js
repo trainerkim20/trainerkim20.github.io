@@ -22,7 +22,8 @@ let productData = JSON.parse(storage.getItem("Object Name"));
 navigationBar(productData);
 function navigationBar(productData) {
     
-let navListItems = "<li>" + "<a>" + "Home" + "</a>" + "</li>";
+let navListItems = '<li><a href="https://trainerkim20.github.io/acme/index.html">Home</a></li>';
+// "<li>" + "<a>" + "Home" + "</a>" + "</li>";
 
     for (let i = 0, x = 4; i < x; i++) {
    
@@ -39,26 +40,26 @@ pageNav.addEventListener('click', function (evt) {
     console.log(pageName);
     console.log(pageName);
     // Get the city name
-    switch (pageName) {
-        case "Home":
-                contentContainer.getAttribute('class', 'hide');
-                home.setAttribute('class', '');
-                document.getElementById("page-title").innerHTML = "ACME | Home" ;
-                break;
-        case "Anvils":
-                contentContainer.setAttribute('class', ''); // removes the hide class 
-                break;
-        case "Explosives":
-                contentContainer.setAttribute('class', ''); // removes the hide class 
-                break;
-        case "Decoys":
-                contentContainer.setAttribute('class', ''); // removes the hide class 
-                break;
-        case "Traps":
-                contentContainer.setAttribute('class', ''); // removes the hide class 
-            evt.preventDefault();
-            break;
-    }
+    // switch (pageName) {
+    //     case "Home":
+    //             contentContainer.getAttribute('class', 'hide');
+    //             home.setAttribute('class', '');
+    //             document.getElementById("page-title").innerHTML = "ACME | Home" ;
+    //             break;
+    //     case "Anvils":
+    //             contentContainer.setAttribute('class', ''); // removes the hide class 
+    //             break;
+    //     case "Explosives":
+    //             contentContainer.setAttribute('class', ''); // removes the hide class 
+    //             break;
+    //     case "Decoys":
+    //             contentContainer.setAttribute('class', ''); // removes the hide class 
+    //             break;
+    //     case "Traps":
+    //             contentContainer.setAttribute('class', ''); // removes the hide class 
+    //         evt.preventDefault();
+    //         break;
+    // }
 
 getData();
 function getData() {
@@ -116,6 +117,10 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
 
             let testname = g.name;
             console.log(testname);
+        })
+        .catch(function(error){
+            console.log('There was a fetch problem', error.message);
+            home.innerHTML = 'Sorry, the data could not be processed.';
         })
         
     })
