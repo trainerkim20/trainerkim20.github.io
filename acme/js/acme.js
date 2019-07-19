@@ -41,8 +41,9 @@ pageNav.addEventListener('click', function (evt) {
     // Get the city name
     switch (pageName) {
         case "Home":
-                contentContainer.setAttribute('class', 'hide'); // removes the hide class 
+                contentContainer.getAttribute('class', 'hide');
                 home.setAttribute('class', '');
+                document.getElementById("page-title").innerHTML = "ACME | Home" ;
                 break;
         case "Anvils":
                 contentContainer.setAttribute('class', ''); // removes the hide class 
@@ -80,6 +81,7 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
 
             let productname = g.name;
             document.getElementById("heading").innerHTML = productname;
+            document.getElementById("page-title").innerHTML = "ACME | " + productname;
 
             let image = g.path;
             document.getElementById("image").src = image;
@@ -91,7 +93,7 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
             document.getElementById("manufacturer").innerHTML = manufacturer;
 
             let review = g.reviews;
-            document.getElementById("review").innerHTML = review;
+            document.getElementById("rating").innerHTML = review;
 
             let price = g.price;
             document.getElementById("price").innerHTML = price;

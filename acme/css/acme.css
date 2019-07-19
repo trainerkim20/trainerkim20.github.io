@@ -1,19 +1,63 @@
+/*Mobile First*/
+
 body {
  background-image: url("/acme/images/site/background.jpg");
  background-size: cover;
+ background-repeat: no-repeat;
  font-family: sans-serif;
- margin-left:auto;
- margin-right:auto;
- 
- 
 }
+
+/* #background {
+    background-image: url("/acme/images/site/background.jpg");
+ background-size: cover;
+} */
 
 .hide {
     display: none;
 }
 
+#featureImg {
+    width: 390px;
+}
+
+#rocket {
+
+    /*Need to figure out positions*/
+        color: #990033;
+        list-style-type: none;
+        /* flex-flow: wrap;  */
+        position: absolute; 
+        z-index: 1;
+        bottom: 210px;
+        left: 150px;
+        width: 50%;
+    }
+
+    #rocket li {
+
+        /*Need to figure out positions*/
+            margin: 2px;
+        }
+
+        #rocket h2 {
+
+            /*Need to figure out positions*/
+                margin: 2px;
+            }
+
+            #rocket img {
+
+                /*Need to figure out positions*/
+                    width: 75%;
+                }
+        
+    
+
 #whites {
     background-color: #ffffff;
+    width: 99%;
+    margin-left:auto;
+ margin-right:auto;
 }
 
 header img {
@@ -31,133 +75,90 @@ header li {
     left: -10px;
     display: inline; 
     list-style-type: none;
-    padding: 10px;
+    padding: 5px;
     color:  #ffffff;
     
 }
 
+#main-heading {
+    font-size: 30px;
+}
+
+
+
 main {
-    height: 800px;
-    font-size: 20px;
+    height: 1400px;
+    font-size: 17px;
 }
 
 h1 {
     padding: 10px;
 }
 
-footer {
-    text-align: center;
-}
-
-@media only screen and (min-width: 600px) {
-/*Home Page CSS*/
-
-#featureImg {
-    width: 100%;
-}
-#rocket {
-
-/*Need to figure out positions*/
-    color: #de2226;
-    list-style-type: none;
-    flex-flow: wrap;  
-    z-index: 1;
-    /* top: ;
-    left: ; */
-    flex: 0 350px 900px;
-}
-
-#rocket h2 {
-    padding: 0;
-    margin: 0;
-}
-
-#column1, #column {
-    flex-flow: column;
-    /* flex-direction: row; */
-    
-    
-}
-
 #recipe {
+    display: flex;
     text-align: center;
-    width: 400px;
-    flex: 0 2 50%;
-    flex-direction: column;
-    flex-flow: row;
-    text-align: center;
+    width: 99%;
+    flex-wrap: wrap;
+    
     
 }
 
 #recipe div {
     background-color: grey;
     border: solid 1px white;
-    width: 300px;
+    width: 40%;
 }
 
-/* #column2 {
-    width: 50%;
+#review {
     display: flex; 
     flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    margin: 0; 
+    position: relative;
+    top: 500px;
+    
 }
 
-
-/* #recipe li {
-    width: 50px;
-    
-    border: solid 2px grey;
-    text-align: center;
-    background-color: grey;
-    margin: 0;
-    padding: 0;
-} */
-
-/* #recipe img {
-    align-self: center; 
-} */
-
-/*Content Pages CSS*/
-
-
-#content img {
-    position: relative; 
-    top: 10px;
-    left: 1px;
+#image {
+    width: 100%;
 }
 
 #left {
-    flex-flow: wrap; 
-    flex-direction: column;
-    justify-content: flex-start;
-    left: 5px;
-    top: 200px;
+    /* display: flex;
+    flex-flow: wrap;  */
+    /* left: 5px;
+    top: 200px; */
+    width: 100%;
 }
+
+
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#right p {
+    /* display: flex;
+    flex-flow: wrap;  */
+    width: 80%;
+    
+} 
 
 #right {
-    flex-flow: wrap; 
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 500px;
-    left: 50%;
-    top: 500px;
-} 
-
-.content {
-    flex-flow: wrap;
-    flex-flow: row;
-
-} 
-
-#priceline {
-    color: #990033;
-    font-size: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    /* bottom: 400px;
+    left: 550px; */
 }
 
-/* List settings for the mobile version
-/* ul {
+
+footer {
+    text-align: center;
+}
+
+/*List settings for the mobile version*/
+/* nav ul {
     width: 40%;
     display: flex; 
     flex-wrap: wrap;
@@ -166,11 +167,222 @@ footer {
     margin: 0;
 
 }
-li {
+nav li {
     width: 400px;
     flex: 0 1 50%;
     border: solid 2px #000;
     text-align: center;
 } */
 
-}
+
+    @media only screen and (min-width: 600px) {
+         /*Home Page CSS*/
+         body {
+            background-image: url("/acme/images/site/background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+           }
+           
+           /* #background {
+               background-image: url("/acme/images/site/background.jpg");
+            background-size: cover;
+           } */
+           
+           /* .hide {
+               display: none;
+           } */
+           
+           header img {
+               padding: 10px;
+           }
+           
+           header ul {
+               
+               background-color: #de2226;
+               padding: 20px;
+           }
+           
+           header li {
+               position: relative;
+               left: -10px;
+               display: inline; 
+               list-style-type: none;
+               padding: 10px;
+               color:  #ffffff;
+               
+           }
+           
+           main {
+               height: 1000px;
+               font-size: 20px;
+           }
+           
+           h1 {
+               padding: 10px;
+           }
+           
+           #image {
+            width: 100%;
+        }
+           
+           footer {
+               text-align: center;
+           }
+        
+        
+        #whites {
+            background-color: #ffffff;
+            width: 70%;
+            margin-left:auto;
+         margin-right:auto;
+        }
+        
+        #featureImg {
+            width: 100%;
+        }
+        #rocket {
+        
+        /*Need to figure out positions*/
+            color: #990033;
+            list-style-type: none;
+            /* flex-flow: wrap;  */
+            position: relative; 
+            z-index: 1;
+            bottom: 300px;
+            left: 400px;
+        }
+        
+        #rocket h2 {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #column1 {
+            position: relative;
+            bottom: 550px;
+            left: 50px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        
+        } 
+        
+        #column2 {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            bottom: 248px;
+            left: 365px; 
+        }
+        
+        #review {
+            display: flex; 
+            flex-wrap: wrap;
+        }
+        
+        #recipe {
+            display: flex;
+            text-align: center;
+            width: 45%;
+            flex-wrap: wrap;
+            
+        }
+        
+        #recipe div {
+            background-color: grey;
+            border: solid 1px white;
+            width: 40%;
+        }
+        
+        #column2 {
+            width: 50%;
+            display: flex; 
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+        }
+        
+        
+        /* #recipe li {
+            width: 50px;
+            
+            border: solid 2px grey;
+            text-align: center;
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+        } */
+        
+        /* #recipe img {
+            align-self: center; 
+        } */
+        
+        /*Content Pages CSS*/
+        
+        
+        /* #content img {
+            /* position: relative; 
+            top: 10px;
+            left: 1px; */
+            /*width: 50%;*/
+            /* height: 60%; */
+        
+        
+        #left {
+            width: 45%; 
+             
+        }
+        
+        #content {
+            display: flex;
+
+        }
+        
+        #right p {
+            /* display: flex;
+            flex-flow: wrap;  */
+            width: 70%;
+            
+        } 
+        
+        #right {
+            display: flex;
+            flex-wrap: wrap;
+            width: 45%;
+            /* bottom: 400px;
+            left: 550px; */
+        }
+        
+        /* .contents {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column;
+            
+        
+        }  */
+        /* List settings for the mobile version
+        /* ul {
+            width: 40%;
+            display: flex; 
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        
+        }
+        li {
+            width: 400px;
+            flex: 0 1 50%;
+            border: solid 2px #000;
+            text-align: center;
+        } */
+        
+        #priceline {
+            color: #990033;
+            font-size: 50px;
+        }
+    
+    
+    }

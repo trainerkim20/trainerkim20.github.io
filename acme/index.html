@@ -2,12 +2,13 @@
 <html lang="en-us">
  <head>
   <meta charset="UTF-8">
-  <title id="page-title">ACME</title>
+  <title id="page-title">ACME | Home</title>
   <meta name="description" content="Short Description of the page.">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" type="text/css" href="css/acme.css" media="screen">
  </head>
  <body> 
+         <div id="background">
          <div id="whites">
         <header>
         <img src="/acme/images/site/logo.png"/>
@@ -20,7 +21,7 @@
         <main>
         
         <div id="homepage">
-                        <h1>Welcome to ACME</h1>
+                        <h1 id="main-heading">Welcome to ACME</h1>
                 <img src="/acme/images/site/feature.jpg" id="featureImg"/>
                 <ul id="rocket">
                         <li><h2>Acme Rocket</h2></li>
@@ -30,49 +31,58 @@
                         <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="/acme/images/site/iwantit.gif"></a></li>
                       </ul>
                       
-                <div id="column1">
-                <section id="recipe">
-                        <div id="BBQ">
-                                <img src="/acme/images/recipes/bbqsand.jpg" alt="BBQ Sandwich"/>
-                <p><a href="#">Pulled Roadrunner BBQ</a></p>
-        </div>
-                <div id="pie">
-                <img src="/acme/images/recipes/potpie.jpg" alt="Pot Pie"/>
-                <p><a href="#">Roadrunner Pot Pie</a></p>
-        </div>
-               
                 
-                                <div id="soup">
-                <img src="/acme/images/recipes/soup.jpg" alt="Soups"/>
-                <p><a href="#">Roadrunner Soup</a></p>
-        </div>
-                <div id="taco">
-                <img src="/acme/images/recipes/taco.jpg" alt="Tacos"/>
-                <p><a href="#">Roadrunner Tacos</a></p>
-        </div>
-         
-</div>
         <div id="column2">
-                        <ul id="reviews">
-                                  <h3>ACME Rocket Reviews</h3>
+                <section id="reviews">
+                        <ul>
+                <h1>ACME Rocket Reviews</h1>
                           <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
                           <li>"That thing was fast!" (4/5)</li>
                           <li>"Talk about fast delivery." (5/5)</li>
                           <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
                           <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
                         </ul>
+                </section>
                   </div>
+                  <div id="column1">
+                                <h2>Featured Recipes</h2>
+                <section id="recipe">
+                        
+                        <div id="BBQ">
+                <img src="/acme/images/recipes/bbqsand.jpg" alt="BBQ Sandwich"/>
+                <p><a href="#">Pulled Roadrunner BBQ</a></p>
         </div>
+                <div id="pie">
+                <img src="/acme/images/recipes/potpie.jpg" alt="Pot Pie"/>
+                <p><a href="#">Roadrunner Pot Pie</a></p>
+        </div>
+        <div id="soup">
+                        <img src="/acme/images/recipes/soup.jpg" alt="Soups"/>
+                        <p><a href="#">Roadrunner Soup</a></p>
+                </div>
+                        <div id="taco">
+                        <img src="/acme/images/recipes/taco.jpg" alt="Tacos"/>
+                        <p><a href="#">Roadrunner Tacos</a></p>
+                </div>
 
+        </div>
+        
+       
+        
+                        
+ 
+</div>
+</section>
+<h1 id="heading"></h1>
         <div id="content" class="hide">
-                        <h1 id="heading"></h1>
-                <div id="left" class="content">
+                        
+                <div id="left">
         <img src="#" id="image"/>
 </div>
         <div id="right" class="content">
         <p id="description"></p>
         <p><b>Made by: </b><span id="manufacturer"></span></p>
-        <p><b>Reviews: </b><span id="review"></span></p>
+        <p><b>Reviews: </b><span id="rating"></span></p>
         <p id="priceline"><b>Price: </b><span id="price"></span></p>
 </div>
 </div>
@@ -83,6 +93,7 @@
          <p>All images used are believed to be in "Fair Use". Please notify the author if any are not and will be removed.</p>
         </footer> 
         </div>
+</div>
         
 <script src="js/acme.js"></script>            
 </body>
