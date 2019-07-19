@@ -1,10 +1,10 @@
 'use strict';
 // Set global variable for custom header required by NWS API
-var idHeader = {
-    headers: {
-      "User-Agent": "Student Learning Project - fre16008@byui.edu"
-    }
-  };
+// var idHeader = {
+//     headers: {
+//       "User-Agent": "Student Learning Project - fre16008@byui.edu"
+//     }
+//   };
 
   // Call the function to get our location
     //getGeoLocation();
@@ -13,12 +13,13 @@ var idHeader = {
 var storage = window.localStorage;
 //storage.clear();
 let pageTitle = document.getElementById('page-title');
-let acmeURL = "js/acme.json";
+let acmeURL = "/acme/js/acme.json";
 let pageNav = document.getElementById('pagenav');
-let home = document.getElementById('homepage');
+var home = document.getElementById('homepage');
 let contentContainer = document.getElementById('content');
 getData();
 let productData = JSON.parse(storage.getItem("Object Name"));
+
 navigationBar(productData);
 function navigationBar(productData) {
     
@@ -32,36 +33,6 @@ let navListItems = "<li>" + "<a>" + "Home" + "</a>" + "</li>";
        }
        return navListItems;
 }
-
-document.getElementById("pageNavItems").innerHTML = navigationBar(productData);
-pageNav.addEventListener('click', function (evt) {
-    home.setAttribute('class', 'hide'); // hides the home container   
-
-    let pageName = evt.target.innerHTML;
-    console.log(pageName);
-    console.log(pageName);
-    // Get the city name
-    switch (pageName) {
-        case "Home":
-                contentContainer.getAttribute('class', '');
-                home.setAttribute('class', '');
-                document.getElementById("page-title").innerHTML = "ACME | Home" ;
-                break;
-        case "Anvils":
-                contentContainer.setAttribute('class', 'hide'); // removes the hide class 
-                break;
-        case "Explosives":
-                contentContainer.setAttribute('class', 'hide'); // removes the hide class 
-                break;
-        case "Decoys":
-                contentContainer.setAttribute('class', 'hide'); // removes the hide class 
-                break;
-        case "Traps":
-                contentContainer.setAttribute('class', 'hide'); // removes the hide class 
-            evt.preventDefault();
-            break;
-    }
-
 // getData();
 function getData() {
     fetch(acmeURL)
@@ -69,19 +40,23 @@ function getData() {
             if (response.ok) {
                 return response.json();
             }
+            else {
             throw new ERROR('Network response was not OK.');
+        }
         })
         .then(function (data) {
             // Check the data object that was retrieved
             console.log(data);
 
 let objectNames = Object.keys(data);
+console.log(objectNames);
 storage.setItem("Object Name", JSON.stringify(objectNames));
 
-            let g = data[pageName];
+            let g = data[objectNames[1]];
             storage.setItem("JSON", JSON.stringify(g));
 
             let productname = g.name;
+            console.log(productname);
             document.getElementById("heading").innerHTML = productname;
             document.getElementById("page-title").innerHTML = "ACME | " + productname;
 
@@ -102,23 +77,55 @@ storage.setItem("Object Name", JSON.stringify(objectNames));
 
         })
 }
+document.getElementById("pageNavItems").innerHTML = navigationBar(productData);
+pageNav.addEventListener('click', function (evt) {
+    home.setAttribute('class', 'hide'); // hides the home container   
 
-    fetch(acmeURL)
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new ERROR('Network response was not OK.');
-        })
-        .then(function (data) {
-            // Check the data object that was retrieved
-            console.log(data);
+    let pageName = evt.target.innerHTML;
+    console.log(pageName);
+    // Get the city name
+    switch (pageName) {
+        case "Home":
+                contentContainer.getAttribute('class', 'hide');
+                home.setAttribute('class', '');
+                document.getElementById("page-title").innerHTML = "ACME | Home" ;
+                break;
+        case "Anvils":
+                evt.preventDefault();
+                contentContainer.setAttribute('class', ''); // removes the hide class 
+                break;
+        case "Explosives":
+                evt.preventDefault();
+                contentContainer.setAttribute('class', ''); // removes the hide class 
+                break;
+        case "Decoys":
+                evt.preventDefault();
+                contentContainer.setAttribute('class', ''); // removes the hide class 
+                break;
+        case "Traps":
+                evt.preventDefault();
+                contentContainer.setAttribute('class', ''); // removes the hide class 
+            break;
+    }
 
-            let g = data;
 
-            let testname = g.name;
-            console.log(testname);
-        })
+
+    // fetch(acmeURL)
+    //     .then(function (response) {
+    //         if (response.ok) {
+    //             return response.json();
+    //         }
+    //         throw new ERROR('Network response was not OK.');
+    //     })
+    //     .then(function (data) {
+    //         // Check the data object that was retrieved
+    //         console.log(data);
+
+    //         let g = data;
+
+    //         let testname = g.name;
+    //         console.log(testname);
+    //     })
         // .catch(function(error){
         //     console.log('There was a fetch problem', error.message);
         //     home.innerHTML = 'Sorry, the data could not be processed.';
