@@ -25,3 +25,9 @@ class Car {
         return 4;
     }
 }
+
+let car = new Car(5);
+car.accelerate();
+car.getSpeed();
+
+console.log(Car.numberOfWheels());
